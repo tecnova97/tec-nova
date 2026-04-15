@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TecNova - Glasfaser Montage</title>
+<style>
+body {font-family: Arial; margin:0; background:#f4f4f4;}
+header {background:#0d6efd; color:white; padding:20px; text-align:center;}
+section {padding:40px;}
+.container {max-width:1000px; margin:auto;}
+h1,h2 {margin-bottom:10px;}
+.box {background:white; padding:20px; margin:20px 0; border-radius:10px;}
+footer {background:#222; color:white; text-align:center; padding:20px;}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>TecNova</h1>
+<p>Glasfaser Einblasen und Montage</p>
+</header>
+
+<section class="container">
+<div class="box">
+<h2>Über uns</h2>
+<p>Wir sind spezialisiert auf Glasfaser Einblasen und professionelle Montage in ganz Deutschland.</p>
+</div>
+
+<div class="box">
+<h2>Unsere Leistungen</h2>
+<ul>
+<li>Glasfaser Einblasen</li>
+<li>FTTH Installation</li>
+<li>Netzwerk Montage</li>
+<li>Wartung und Reparatur</li>
+</ul>
+</div>
+
+<div class="box">
+<h2>Kontakt</h2>
+<p><strong>Telefon:</strong> 01626117789</p>
+<p><strong>Adresse:</strong> Hameln, Deutschland</p>
+</div>
+
+<div class="box">
+<h2>Impressum</h2>
+<p>TecNova<br>
+Inhaber: Abdulkader Salmo<br>
+Hohes Feld 3<br>
+31787 Hameln<br>
+Deutschland</p>
+</div>
+
+</section>
+
+<footer>
+<p>© 2026 TecNova</p>
+</footer>
+
+</body>
+</html>
