@@ -16,7 +16,6 @@
       --brand:#0f6fff;
       --brand-2:#2ac4ff;
       --soft:#f4f8fc;
-      --soft-2:#eef5fb;
       --accent:#12b981;
       --shadow:0 18px 50px rgba(8,17,32,.10);
       --radius:24px;
@@ -31,7 +30,9 @@
       background:linear-gradient(180deg,#f7fbff 0%, #f2f7fb 100%);
       line-height:1.6;
     }
+
     a{text-decoration:none;color:inherit}
+    img{max-width:100%;display:block}
     .container{width:min(1180px,92%);margin:auto}
 
     .topbar{
@@ -40,21 +41,23 @@
       backdrop-filter:blur(12px);
       border-bottom:1px solid rgba(255,255,255,.08);
     }
+
     .nav{
       display:flex; align-items:center; justify-content:space-between;
       min-height:76px; gap:20px;
     }
+
     .logo{
-      display:flex; align-items:center; gap:12px;
+      display:flex; align-items:center; gap:14px;
       color:#fff; font-weight:700; font-size:28px;
     }
-    .logo-badge{
-      width:42px; height:42px; border-radius:14px;
-      display:grid; place-items:center;
-      background:linear-gradient(135deg,var(--brand),var(--brand-2));
-      box-shadow:0 10px 24px rgba(15,111,255,.35);
-      font-size:18px; color:#fff;
+
+    .logo img{
+      height:48px;
+      width:auto;
+      object-fit:contain;
     }
+
     .logo small{
       display:block; font-size:11px; letter-spacing:.14em; text-transform:uppercase;
       color:#95d8ff; margin-top:-3px;
@@ -63,10 +66,13 @@
     .nav-links{
       display:flex; align-items:center; gap:22px;
     }
+
     .nav-links a{
       color:#dcecff; font-size:15px; opacity:.96;
     }
+
     .nav-links a:hover{color:#fff}
+
     .nav-actions{
       display:flex; align-items:center; gap:12px;
     }
@@ -77,21 +83,26 @@
       padding:14px 20px; border-radius:14px; font-weight:700;
       transition:.2s ease;
     }
+
     .btn:hover{transform:translateY(-1px)}
+
     .btn-primary{
       background:linear-gradient(135deg,var(--brand),var(--brand-2));
       color:#fff;
       box-shadow:0 12px 28px rgba(15,111,255,.24);
     }
+
     .btn-secondary{
       background:rgba(255,255,255,.06);
       border:1px solid rgba(255,255,255,.15);
       color:#fff;
     }
+
     .btn-light{
       background:#fff; color:var(--text);
       border:1px solid var(--line);
     }
+
     .btn-whatsapp{
       background:#15c95b; color:#fff;
       box-shadow:0 12px 28px rgba(21,201,91,.24);
@@ -114,6 +125,7 @@
         linear-gradient(135deg,var(--bg) 0%, var(--bg2) 58%, #154cae 100%);
       color:#fff;
     }
+
     .hero::after{
       content:"";
       position:absolute; inset:auto -120px -140px auto;
@@ -122,11 +134,13 @@
       filter:blur(8px);
       pointer-events:none;
     }
+
     .hero-inner{
       display:grid; grid-template-columns:1.15fr .85fr; gap:36px;
       padding:76px 0 88px;
       align-items:center;
     }
+
     .eyebrow{
       display:inline-flex; align-items:center; gap:10px;
       padding:10px 14px; border-radius:999px;
@@ -135,30 +149,37 @@
       color:#dff4ff; font-size:14px;
       margin-bottom:18px;
     }
+
     h1{
       margin:0 0 16px;
       font-size:clamp(38px,5.7vw,64px);
       line-height:1.02;
       max-width:740px;
     }
+
     .hero p{
       margin:0; color:#e7effa; font-size:18px; max-width:700px;
     }
+
     .hero-actions{
       display:flex; gap:12px; flex-wrap:wrap; margin-top:28px;
     }
+
     .hero-stats{
       display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:30px;
     }
+
     .stat{
       background:rgba(255,255,255,.08);
       border:1px solid rgba(255,255,255,.12);
       border-radius:20px;
       padding:16px;
     }
+
     .stat strong{
       display:block; font-size:26px; margin-bottom:4px;
     }
+
     .stat span{color:#dbeafe; font-size:14px}
 
     .hero-panel{
@@ -168,22 +189,40 @@
       padding:24px;
       box-shadow:0 26px 60px rgba(0,0,0,.20);
     }
+
+    .hero-logo{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      margin-bottom:20px;
+    }
+
+    .hero-logo img{
+      width:min(220px, 70%);
+      height:auto;
+      filter:drop-shadow(0 14px 24px rgba(0,0,0,.25));
+    }
+
     .panel-head{
       display:flex; gap:10px; margin-bottom:16px;
     }
+
     .dot{
       width:11px; height:11px; border-radius:50%;
       background:#fff; opacity:.85;
     }
+
     .service-list{
       display:grid; gap:12px;
     }
+
     .service-item{
       display:flex; gap:14px; align-items:flex-start;
       background:rgba(255,255,255,.08);
       border:1px solid rgba(255,255,255,.10);
       border-radius:20px; padding:16px;
     }
+
     .service-icon{
       width:42px; height:42px; border-radius:14px;
       display:grid; place-items:center;
@@ -191,20 +230,25 @@
       color:var(--brand); font-weight:700;
       flex:0 0 auto;
     }
+
     .service-item h3{margin:0 0 5px; font-size:18px}
     .service-item p{margin:0; color:#e8f2ff; font-size:14px}
 
     section{padding:82px 0}
+
     .section-title{
       max-width:760px; margin-bottom:28px;
     }
+
     .section-title span{
       display:inline-block; color:var(--brand); font-weight:700;
       letter-spacing:.12em; text-transform:uppercase; font-size:12px; margin-bottom:10px;
     }
+
     .section-title h2{
       margin:0 0 10px; font-size:38px; line-height:1.1;
     }
+
     .section-title p{
       margin:0; color:var(--muted); font-size:17px;
     }
@@ -212,6 +256,7 @@
     .grid-3{
       display:grid; grid-template-columns:repeat(3,1fr); gap:20px;
     }
+
     .card{
       background:var(--card);
       border:1px solid var(--line);
@@ -219,18 +264,21 @@
       padding:26px;
       box-shadow:var(--shadow);
     }
+
     .icon-box{
       width:54px; height:54px; border-radius:18px;
       display:grid; place-items:center;
       background:linear-gradient(135deg,#e8f3ff,#d8f6ff);
       color:var(--brand); font-size:24px; margin-bottom:16px;
     }
+
     .card h3{margin:0 0 8px; font-size:22px}
     .card p{margin:0; color:var(--muted)}
 
     .two-col{
       display:grid; grid-template-columns:1fr 1fr; gap:20px;
     }
+
     .soft-card{
       background:linear-gradient(180deg,#ffffff 0%, #f7fbff 100%);
       border:1px solid var(--line);
@@ -238,13 +286,17 @@
       padding:30px;
       box-shadow:var(--shadow);
     }
+
     .list{
       margin:18px 0 0; padding-left:18px;
     }
+
     .list li{margin:10px 0; color:var(--text)}
+
     .badge-line{
       display:flex; flex-wrap:wrap; gap:10px; margin-top:18px;
     }
+
     .tag{
       padding:10px 14px; border-radius:999px;
       background:#edf7ff; color:#0b5fd2;
@@ -255,69 +307,123 @@
     .steps{
       display:grid; grid-template-columns:repeat(4,1fr); gap:18px;
     }
+
     .step{
-      position:relative;
       background:#fff; border:1px solid var(--line);
       border-radius:24px; padding:24px;
       box-shadow:var(--shadow);
     }
+
     .step-no{
       width:42px; height:42px; border-radius:14px;
       background:linear-gradient(135deg,var(--brand),var(--brand-2));
       display:grid; place-items:center;
       color:#fff; font-weight:700; margin-bottom:14px;
     }
+
     .step h3{margin:0 0 8px; font-size:20px}
     .step p{margin:0; color:var(--muted)}
+
+    .gallery-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+    }
+
+    .gallery-card{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:24px;
+      overflow:hidden;
+      box-shadow:var(--shadow);
+    }
+
+    .gallery-card img{
+      width:100%;
+      height:260px;
+      object-fit:cover;
+    }
+
+    .gallery-card .caption{
+      padding:18px;
+    }
+
+    .gallery-card h3{
+      margin:0 0 6px;
+      font-size:20px;
+    }
+
+    .gallery-card p{
+      margin:0;
+      color:var(--muted);
+      font-size:14px;
+    }
 
     .contact-wrap{
       display:grid; grid-template-columns:1fr .9fr; gap:20px;
     }
+
     .contact-card{
       background:#fff; border:1px solid var(--line);
       border-radius:28px; padding:30px;
       box-shadow:var(--shadow);
     }
+
     .contact-grid{
       display:grid; grid-template-columns:1fr 1fr; gap:14px;
       margin-top:18px;
     }
+
     .mini-box{
       background:var(--soft); border:1px solid #dfeaf5;
       border-radius:20px; padding:18px;
     }
+
     .mini-box h4{margin:0 0 6px; font-size:16px}
     .mini-box p{margin:0; color:var(--muted); font-size:14px}
-    .notice{
-      margin-top:16px;
-      background:#f5fbf8;
-      border:1px solid #cdeedd;
-      border-left:4px solid var(--accent);
-      border-radius:16px;
-      padding:16px 18px;
-      color:#155739;
+
+    .map-box{
+      margin-top:18px;
+      border-radius:20px;
+      overflow:hidden;
+      border:1px solid var(--line);
+      box-shadow:var(--shadow);
+    }
+
+    .map-box iframe{
+      width:100%;
+      height:320px;
+      border:0;
+      display:block;
     }
 
     .legal-section{
       padding-top:20px;
     }
+
     .accordion{
       display:grid; gap:16px;
     }
+
     details.legal{
       background:#fff; border:1px solid var(--line); border-radius:22px; overflow:hidden;
       box-shadow:var(--shadow);
     }
+
     details.legal[open]{border-color:#cfe2ff}
+
     details.legal summary{
       list-style:none; cursor:pointer; padding:22px 24px; font-weight:700; font-size:22px;
       display:flex; align-items:center; justify-content:space-between;
     }
+
     details.legal summary::-webkit-details-marker{display:none}
+
     .legal-body{
       padding:0 24px 24px;
       color:var(--text);
     }
+
     .legal-body h3{margin:20px 0 8px}
     .legal-body p{margin:0 0 12px; color:#334155}
 
@@ -329,6 +435,7 @@
       display:flex; justify-content:space-between; align-items:center; gap:16px;
       box-shadow:0 22px 55px rgba(8,17,32,.18);
     }
+
     .cta-band h3{margin:0 0 8px; font-size:30px}
     .cta-band p{margin:0; color:#dbeafe}
 
@@ -338,23 +445,35 @@
       color:#dce8f9;
       padding:40px 0 32px;
     }
+
     .footer-grid{
       display:grid; grid-template-columns:1.2fr .8fr .8fr; gap:20px;
     }
+
     .footer-grid h4{margin:0 0 12px; color:#fff}
     .footer-grid p, .footer-grid a{color:#c8d8ee; font-size:15px}
+
     .footer-bottom{
       margin-top:24px; padding-top:20px;
       border-top:1px solid rgba(255,255,255,.08);
       color:#9fb3d1; font-size:14px;
     }
 
+    .footer-logo img{
+      height:52px;
+      width:auto;
+      object-fit:contain;
+      margin-bottom:14px;
+    }
+
     @media (max-width: 980px){
-      .hero-inner,.grid-3,.two-col,.steps,.contact-wrap,.footer-grid,.hero-stats,.contact-grid{
+      .hero-inner,.grid-3,.two-col,.steps,.contact-wrap,.footer-grid,.hero-stats,.contact-grid,.gallery-grid{
         grid-template-columns:1fr;
       }
+
       .nav-links,.nav-actions .btn-secondary{display:none}
       .menu-toggle{display:inline-grid; place-items:center}
+
       .nav.open .nav-links{
         display:flex; position:absolute; top:76px; left:4%; right:4%;
         flex-direction:column; align-items:flex-start; gap:0;
@@ -362,17 +481,22 @@
         border:1px solid rgba(255,255,255,.08);
         border-radius:20px; padding:10px 0; box-shadow:0 20px 40px rgba(0,0,0,.25);
       }
+
       .nav.open .nav-links a{
         width:100%; padding:14px 18px;
       }
+
       .nav.open .nav-actions{
         display:flex; position:absolute; top:calc(76px + 320px); left:4%; right:4%;
       }
+
       .nav.open .nav-actions .btn-primary{
         width:100%;
       }
+
       .nav-actions{display:none}
       .cta-band{flex-direction:column; align-items:flex-start}
+      .gallery-card img{height:220px}
     }
   </style>
 </head>
@@ -380,7 +504,7 @@
   <div class="topbar">
     <div class="container nav" id="siteNav">
       <a href="#start" class="logo">
-        <span class="logo-badge">TN</span>
+        <img src="logo.png" alt="TecNova Logo">
         <span>TecNova<small>Glasfaser & Montage</small></span>
       </a>
 
@@ -388,6 +512,7 @@
         <a href="#leistungen">Leistungen</a>
         <a href="#unternehmen">Unternehmen</a>
         <a href="#ablauf">Ablauf</a>
+        <a href="#projekte">Projekte</a>
         <a href="#kontakt">Kontakt</a>
         <a href="#rechtliches">Rechtliches</a>
       </nav>
@@ -405,7 +530,7 @@
     <div class="container hero-inner">
       <div>
         <div class="eyebrow">Netzinfrastruktur · FTTH / FTTX · Montage</div>
-        <h1>Moderner Firmenauftritt statt einfachem Platzhalter 🚀</h1>
+        <h1>Professionelle Glasfaserarbeiten mit sichtbarer Qualität vor Ort</h1>
         <p>
           TecNova steht für Glasfaser Einblasen und Montage mit klarem Fokus auf saubere
           Ausführung, direkte Kommunikation und professionelle Außendarstellung für Auftraggeber in Deutschland.
@@ -413,7 +538,7 @@
 
         <div class="hero-actions">
           <a class="btn btn-primary" href="#kontakt">Jetzt anfragen</a>
-          <a class="btn btn-secondary" href="#leistungen">Leistungen ansehen</a>
+          <a class="btn btn-secondary" href="#projekte">Bilder ansehen</a>
           <a class="btn btn-whatsapp" href="https://wa.me/491626117789" target="_blank" rel="noopener">WhatsApp</a>
         </div>
 
@@ -434,6 +559,10 @@
       </div>
 
       <div class="hero-panel">
+        <div class="hero-logo">
+          <img src="logo-round.png" alt="TecNova Rundlogo">
+        </div>
+
         <div class="panel-head">
           <span class="dot"></span>
           <span class="dot"></span>
@@ -475,8 +604,8 @@
         <span>Leistungen</span>
         <h2>Ein Auftritt mit Struktur, Navigation und echter Firmenwirkung</h2>
         <p>
-          Genau das hat dir in der alten Version gefehlt. Diese Vorlage hat klare Bereiche,
-          Navigation oben, Call-to-Actions, rechtliche Inhalte und eine deutlich stärkere Optik.
+          Diese Vorlage hat klare Bereiche, Navigation oben, Call-to-Actions, rechtliche Inhalte
+          und jetzt auch echte Projektbilder aus der Praxis.
         </p>
       </div>
 
@@ -534,7 +663,7 @@
         <ul class="list">
           <li>Sticky-Navigation für schnelles Springen zwischen Bereichen</li>
           <li>Deutlich stärkeres Hero-Design</li>
-          <li>Mehrere Inhaltsbereiche statt nur Textboxen</li>
+          <li>Echte Bilder von laufenden Arbeiten</li>
           <li>Kontaktbereich mit klaren Aktionen</li>
           <li>Rechtliche Inhalte direkt integriert</li>
           <li>Responsive Darstellung für Handy und Desktop</li>
@@ -566,14 +695,74 @@
 
         <div class="step">
           <div class="step-no">3</div>
-          <h3>Vertrauen</h3>
-          <p>Unternehmensdaten, Rechtsform und seriöser Aufbau für Auftraggeber.</p>
+          <h3>Praxisbilder</h3>
+          <p>Reale Arbeiten vor Ort schaffen Vertrauen und zeigen echte Erfahrung.</p>
         </div>
 
         <div class="step">
           <div class="step-no">4</div>
           <h3>Kontakt</h3>
-          <p>Anruf, WhatsApp und E-Mail als direkte Conversion-Punkte.</p>
+          <p>Anruf, WhatsApp und E-Mail als direkte Kontaktpunkte.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projekte">
+    <div class="container">
+      <div class="section-title">
+        <span>Projekte</span>
+        <h2>Bilder aus der Praxis</h2>
+        <p>Reale Einblicke in Glasfaserverteiler, Spleißarbeiten, Patchfelder und Einblasprojekte vor Ort.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-card">
+          <img src="work-1.jpg" alt="Glasfaser Rack und Patchfeld">
+          <div class="caption">
+            <h3>Patchfeld und Rack</h3>
+            <p>Strukturierte Glasfaserführung und sauberer Aufbau im Technikbereich.</p>
+          </div>
+        </div>
+
+        <div class="gallery-card">
+          <img src="work-2.jpg" alt="Offener Glasfaserverteiler im Außeneinsatz">
+          <div class="caption">
+            <h3>Außenverteiler</h3>
+            <p>Montage und Organisation der Fasern direkt am Netzpunkt vor Ort.</p>
+          </div>
+        </div>
+
+        <div class="gallery-card">
+          <img src="work-3.jpg" alt="Fremco Einblasgerät an Glasfaserverteiler">
+          <div class="caption">
+            <h3>Einblasen vor Ort</h3>
+            <p>Praktische Durchführung von Einblasarbeiten mit professionellem Equipment.</p>
+          </div>
+        </div>
+
+        <div class="gallery-card">
+          <img src="work-4.jpg" alt="Fremco Gerät und Glasfaserkabel auf Baustelle">
+          <div class="caption">
+            <h3>Montage im Feld</h3>
+            <p>Arbeiten direkt an der Infrastruktur mit Fokus auf saubere Ausführung.</p>
+          </div>
+        </div>
+
+        <div class="gallery-card">
+          <img src="work-5.jpg" alt="Beschriftete Glasfaser-Module">
+          <div class="caption">
+            <h3>Dokumentation und Ordnung</h3>
+            <p>Klare Beschriftung und strukturierte Zuordnung in der aktiven Technik.</p>
+          </div>
+        </div>
+
+        <div class="gallery-card">
+          <img src="logo-round.png" alt="TecNova Logo">
+          <div class="caption">
+            <h3>TecNova</h3>
+            <p>Professioneller Auftritt für Glasfaser Einblasen, Montage und Netzinfrastruktur.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -606,27 +795,30 @@
 
           <div class="mini-box">
             <h4>E-Mail</h4>
-            <p><a href="mailto:info@tec-nova.de">info@tec-nova.de</a></p>
+            <p><a href="mailto:tecnova97@gmail.com">tecnova97@gmail.com</a></p>
           </div>
         </div>
 
         <div class="hero-actions" style="margin-top:20px">
-          <a class="btn btn-primary" href="mailto:info@tec-nova.de">E-Mail senden</a>
+          <a class="btn btn-primary" href="mailto:tecnova97@gmail.com">E-Mail senden</a>
           <a class="btn btn-whatsapp" href="https://wa.me/491626117789" target="_blank" rel="noopener">WhatsApp schreiben</a>
           <a class="btn btn-light" href="tel:+491626117789">Jetzt anrufen</a>
         </div>
 
-        <div class="notice">
-          Hinweis: Die Adresse <strong>info@tec-nova.de</strong> musst du noch bei deinem Domain- oder Mail-Anbieter anlegen,
-          sonst funktioniert der E-Mail-Button technisch noch nicht.
+        <div class="map-box">
+          <iframe
+            src="https://maps.google.com/maps?q=Hohes%20Feld%203%2C%2031787%20Hameln%2C%20Deutschland&t=&z=15&ie=UTF8&iwloc=&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
         </div>
       </div>
 
       <div class="contact-card">
         <div class="section-title" style="margin-bottom:10px">
           <span>Firmendaten</span>
-          <h2>Rechtliche Basisdaten</h2>
-          <p>Sauber sichtbar für Deutschland.</p>
+          <h2>Wichtige Unternehmensdaten</h2>
+          <p>Nur das Wesentliche, klar und professionell dargestellt.</p>
         </div>
 
         <div class="mini-box" style="margin-bottom:14px">
@@ -634,29 +826,9 @@
           <p>Einzelunternehmer</p>
         </div>
 
-        <div class="mini-box" style="margin-bottom:14px">
+        <div class="mini-box">
           <h4>USt-IdNr.</h4>
           <p>DE457603829</p>
-        </div>
-
-        <div class="mini-box" style="margin-bottom:14px">
-          <h4>Steuernummer</h4>
-          <p>22/138/13315</p>
-        </div>
-
-        <div class="mini-box" style="margin-bottom:14px">
-          <h4>Handwerkskammer-Betriebsnummer</h4>
-          <p>338748</p>
-        </div>
-
-        <div class="mini-box" style="margin-bottom:14px">
-          <h4>Betriebshaftpflichtversicherung / PRO Kundo-Nr.</h4>
-          <p>30/6264074010</p>
-        </div>
-
-        <div class="mini-box">
-          <h4>BG ETEM Unternehmensnummer</h4>
-          <p>900893132303001</p>
         </div>
       </div>
     </div>
@@ -667,7 +839,7 @@
       <div class="section-title">
         <span>Rechtliches</span>
         <h2>Impressum und Datenschutz direkt eingebaut</h2>
-        <p>Damit die Seite nicht nur schön aussieht, sondern auch die nötige Grundstruktur für Deutschland hat. ⚖️</p>
+        <p>Damit die Seite nicht nur schön aussieht, sondern auch die nötige Grundstruktur für Deutschland hat.</p>
       </div>
 
       <div class="accordion">
@@ -686,21 +858,13 @@
             <p>
               <strong>Kontakt</strong><br>
               Telefon: 01626117789<br>
-              E-Mail: info@tec-nova.de
+              E-Mail: tecnova97@gmail.com
             </p>
 
             <p>
               <strong>Unternehmensangaben</strong><br>
               Rechtsform: Einzelunternehmer<br>
-              USt-IdNr.: DE457603829<br>
-              Steuernummer: 22/138/13315<br>
-              Handwerkskammer-Betriebsnummer: 338748
-            </p>
-
-            <p>
-              <strong>Weitere Angaben</strong><br>
-              Betriebshaftpflichtversicherung / PRO Kundo-Nr.: 30/6264074010<br>
-              BG ETEM Unternehmensnummer: 900893132303001
+              USt-IdNr.: DE457603829
             </p>
 
             <p>
@@ -718,7 +882,7 @@
               Verantwortlich für die Datenverarbeitung auf dieser Website ist:<br>
               TecNova – Inhaber Abdulkader Salmo<br>
               Hohes Feld 3, 31787 Hameln, Deutschland<br>
-              E-Mail: info@tec-nova.de<br>
+              E-Mail: tecnova97@gmail.com<br>
               Telefon: 01626117789
             </p>
 
@@ -754,7 +918,7 @@
 
             <h3>7. Hinweis</h3>
             <p>
-              Diese Fassung ist für eine statische Website ohne Kontaktformular, Karten, Tracking-Skripte oder
+              Diese Fassung ist für eine statische Website ohne Kontaktformular, Tracking-Skripte oder
               externe Marketing-Dienste gedacht. Bei späteren Erweiterungen muss der Text angepasst werden.
             </p>
           </div>
@@ -768,7 +932,7 @@
       <div class="cta-band">
         <div>
           <h3>Nächster sinnvoller Schritt: Domain verbinden</h3>
-          <p>Wenn du willst, gehen wir jetzt direkt von GitHub weiter zu Namecheap und verbinden <strong>tec-nova.de</strong>.</p>
+          <p>Wenn du willst, نكمل مباشرة ربط <strong>tec-nova.de</strong> مع الموقع.</p>
         </div>
         <a class="btn btn-primary" href="#kontakt">Kontaktbereich</a>
       </div>
@@ -778,12 +942,11 @@
   <footer>
     <div class="container footer-grid">
       <div>
-        <div class="logo" style="font-size:24px">
-          <span class="logo-badge" style="width:38px;height:38px;font-size:15px">TN</span>
-          <span>TecNova<small>Glasfaser & Montage</small></span>
+        <div class="footer-logo">
+          <img src="logo.png" alt="TecNova Logo">
         </div>
         <p style="margin-top:14px">
-          Moderner Einseiter für den Firmenstart – mit Navigation, klaren Bereichen, Kontaktpunkten und rechtlicher Grundstruktur.
+          Moderner Einseiter für den Firmenstart – mit Navigation, klaren Bereichen, Praxisbildern, Kontaktpunkten und rechtlicher Grundstruktur.
         </p>
       </div>
 
@@ -792,6 +955,7 @@
         <p><a href="#leistungen">Leistungen</a></p>
         <p><a href="#unternehmen">Unternehmen</a></p>
         <p><a href="#ablauf">Ablauf</a></p>
+        <p><a href="#projekte">Projekte</a></p>
         <p><a href="#kontakt">Kontakt</a></p>
       </div>
 
@@ -800,7 +964,7 @@
         <p><a href="#rechtliches">Impressum</a></p>
         <p><a href="#rechtliches">Datenschutz</a></p>
         <p><a href="tel:+491626117789">Telefon</a></p>
-        <p><a href="mailto:info@tec-nova.de">E-Mail</a></p>
+        <p><a href="mailto:tecnova97@gmail.com">E-Mail</a></p>
       </div>
     </div>
 
