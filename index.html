@@ -31,6 +31,18 @@
   <meta name="geo.placename" content="Hameln">
   <meta name="ICBM" content="52.1033, 9.3562">
 
+  <script>
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+    window.addEventListener('load', function () {
+      window.scrollTo(0, 0);
+    });
+    window.addEventListener('beforeunload', function () {
+      window.scrollTo(0, 0);
+    });
+  </script>
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -163,36 +175,7 @@
     }
 
     .nav-links{
-      display:flex;
-      align-items:center;
-      gap:22px;
-    }
-
-    .nav-links a{
-      color:#dcecff;
-      font-size:15px;
-      position:relative;
-      transition:var(--transition);
-    }
-
-    .nav-links a::after{
-      content:"";
-      position:absolute;
-      left:0;
-      bottom:-8px;
-      width:0;
-      height:2px;
-      background:linear-gradient(90deg,var(--brand),var(--brand2));
-      transition:width .3s ease;
-    }
-
-    .nav-links a:hover{
-      color:#fff;
-      transform:translateY(-2px);
-    }
-
-    .nav-links a:hover::after{
-      width:100%;
+      display:none;
     }
 
     .nav-actions{
@@ -202,7 +185,7 @@
     }
 
     .menu-toggle{
-      display:none;
+      display:none !important;
       width:48px;
       height:48px;
       border:none;
@@ -963,47 +946,8 @@
         grid-template-columns:1fr;
       }
 
-      .nav-links,
       .nav-actions{
         display:none;
-      }
-
-      .menu-toggle{
-        display:inline-grid;
-        place-items:center;
-      }
-
-      .nav.open .nav-links{
-        display:flex;
-        position:absolute;
-        top:82px;
-        left:4%;
-        right:4%;
-        flex-direction:column;
-        align-items:flex-start;
-        gap:0;
-        background:rgba(8,17,32,.98);
-        border:1px solid rgba(255,255,255,.08);
-        border-radius:20px;
-        padding:10px 0;
-        box-shadow:0 20px 40px rgba(0,0,0,.25);
-      }
-
-      .nav.open .nav-links a{
-        width:100%;
-        padding:14px 18px;
-      }
-
-      .nav.open .nav-actions{
-        display:flex;
-        position:absolute;
-        top:calc(82px + 320px);
-        left:4%;
-        right:4%;
-      }
-
-      .nav.open .nav-actions .btn-primary{
-        width:100%;
       }
 
       h1{
@@ -1046,14 +990,7 @@
         <span>TecNova<small>Glasfaser & Montage</small></span>
       </a>
 
-      <nav class="nav-links">
-        <a href="#leistungen">Leistungen</a>
-        <a href="#unternehmen">Unternehmen</a>
-        <a href="#ablauf">Ablauf</a>
-        <a href="#projekte">Projekte</a>
-        <a href="#kontakt">Kontakt</a>
-        <a href="#rechtliches">Rechtliches</a>
-      </nav>
+      <nav class="nav-links"></nav>
 
       <div class="nav-actions">
         <a class="btn btn-secondary" href="tel:+491626117789">Anrufen</a>
@@ -1404,7 +1341,7 @@
       </div>
 
       <div class="accordion">
-        <details class="legal reveal" open>
+        <details class="legal reveal">
           <summary>Impressum <span>＋</span></summary>
           <div class="legal-body">
             <h3>Angaben gemäß § 5 DDG</h3>
@@ -1438,70 +1375,69 @@
         <details class="legal reveal">
           <summary>Datenschutzerklärung <span>＋</span></summary>
           <div class="legal-body">
-            <div class="legal-body">
-  <h3>1. Verantwortlicher</h3>
-  <p>
-    TecNova – Inhaber Abdulkader Salmo<br>
-    Hohes Feld 3<br>
-    31787 Hameln<br>
-    Deutschland<br><br>
-    E-Mail: info@tec-nova.de<br>
-    Telefon: 01626117789
-  </p>
+            <h3>1. Verantwortlicher</h3>
+            <p>
+              TecNova – Inhaber Abdulkader Salmo<br>
+              Hohes Feld 3<br>
+              31787 Hameln<br>
+              Deutschland<br><br>
+              E-Mail: info@tec-nova.de<br>
+              Telefon: 01626117789
+            </p>
 
-  <h3>2. Hosting</h3>
-  <p>
-    Diese Website wird über GitHub Pages (GitHub Inc., USA) ausgeliefert.<br>
-    Beim Aufruf der Website werden technische Daten verarbeitet wie IP-Adresse, Datum, Uhrzeit, Browser und Betriebssystem.<br>
-    Dies dient der Sicherheit und Stabilität der Website (Art. 6 Abs. 1 lit. f DSGVO).<br><br>
-    Es kann nicht ausgeschlossen werden, dass Daten in die USA übertragen werden.
-  </p>
+            <h3>2. Hosting</h3>
+            <p>
+              Diese Website wird über GitHub Pages (GitHub Inc., USA) ausgeliefert.<br>
+              Beim Aufruf der Website werden technische Daten verarbeitet wie IP-Adresse, Datum, Uhrzeit, Browser und Betriebssystem.<br>
+              Dies dient der Sicherheit und Stabilität der Website (Art. 6 Abs. 1 lit. f DSGVO).<br><br>
+              Es kann nicht ausgeschlossen werden, dass Daten in die USA übertragen werden.
+            </p>
 
-  <h3>3. Zweck und Rechtsgrundlage</h3>
-  <p>
-    Die Verarbeitung erfolgt zur Bereitstellung der Website und zur Bearbeitung von Anfragen.<br><br>
-    Rechtsgrundlagen:
-    <br>• Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse)
-    <br>• Art. 6 Abs. 1 lit. b DSGVO (bei Kontaktaufnahme)
-  </p>
+            <h3>3. Zweck und Rechtsgrundlage</h3>
+            <p>
+              Die Verarbeitung erfolgt zur Bereitstellung der Website und zur Bearbeitung von Anfragen.<br><br>
+              Rechtsgrundlagen:
+              <br>• Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse)
+              <br>• Art. 6 Abs. 1 lit. b DSGVO (bei Kontaktaufnahme)
+            </p>
 
-  <h3>4. Kontaktaufnahme</h3>
-  <p>
-    Bei Kontakt per Telefon, E-Mail oder WhatsApp werden Ihre Daten nur zur Bearbeitung Ihrer Anfrage verwendet.
-  </p>
+            <h3>4. Kontaktaufnahme</h3>
+            <p>
+              Bei Kontakt per Telefon, E-Mail oder WhatsApp werden Ihre Daten nur zur Bearbeitung Ihrer Anfrage verwendet.
+            </p>
 
-  <h3>4a. WhatsApp</h3>
-  <p>
-    Bei Nutzung von WhatsApp erfolgt die Verarbeitung durch WhatsApp Ireland Limited.<br>
-    Daten können außerhalb der EU verarbeitet werden.<br><br>
-    Mehr Infos:
-    https://www.whatsapp.com/legal/privacy-policy
-  </p>
+            <h3>4a. WhatsApp</h3>
+            <p>
+              Bei Nutzung von WhatsApp erfolgt die Verarbeitung durch WhatsApp Ireland Limited.<br>
+              Daten können außerhalb der EU verarbeitet werden.<br><br>
+              Mehr Infos:
+              <a href="https://www.whatsapp.com/legal/privacy-policy" target="_blank" rel="noopener">https://www.whatsapp.com/legal/privacy-policy</a>
+            </p>
 
-  <h3>5. Cookies</h3>
-  <p>
-    Diese Website verwendet keine Cookies, die eine Einwilligung erfordern.
-  </p>
+            <h3>5. Cookies</h3>
+            <p>
+              Diese Website verwendet keine Cookies, die eine Einwilligung erfordern.
+            </p>
 
-  <h3>6. Speicherdauer</h3>
-  <p>
-    Daten werden nur so lange gespeichert, wie es für die Anfrage notwendig ist.
-  </p>
+            <h3>6. Speicherdauer</h3>
+            <p>
+              Daten werden nur so lange gespeichert, wie es für die Anfrage notwendig ist.
+            </p>
 
-  <h3>7. Ihre Rechte</h3>
-  <p>
-    Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung sowie Widerspruch.
-  </p>
+            <h3>7. Ihre Rechte</h3>
+            <p>
+              Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung sowie Widerspruch.
+            </p>
 
-  <h3>8. Beschwerderecht</h3>
-  <p>
-    Sie können sich bei einer Datenschutzbehörde beschweren.
-  </p>
+            <h3>8. Beschwerderecht</h3>
+            <p>
+              Sie können sich bei einer Datenschutzbehörde beschweren.
+            </p>
 
-  <h3>9. Hinweis</h3>
-  <p>
-    Diese Datenschutzerklärung gilt für eine einfache Website ohne Tracking oder Analyse-Tools.
-  </p>
+            <h3>9. Hinweis</h3>
+            <p>
+              Diese Datenschutzerklärung gilt für eine einfache Website ohne Tracking oder Analyse-Tools.
+            </p>
           </div>
         </details>
       </div>
@@ -1555,21 +1491,6 @@
   </footer>
 
   <script>
-    const nav = document.getElementById('siteNav');
-    const toggle = document.getElementById('menuToggle');
-
-    toggle.addEventListener('click', function(){
-      nav.classList.toggle('open');
-      toggle.textContent = nav.classList.contains('open') ? '✕' : '☰';
-    });
-
-    document.querySelectorAll('.nav-links a').forEach(link=>{
-      link.addEventListener('click', ()=>{
-        nav.classList.remove('open');
-        toggle.textContent = '☰';
-      });
-    });
-
     const observer = new IntersectionObserver((entries)=>{
       entries.forEach(entry=>{
         if(entry.isIntersecting){
