@@ -788,6 +788,18 @@
       display:block;
     }
 
+    .map-consent{
+      padding:20px;
+      background:#f8fbff;
+      border-top:1px solid var(--line);
+    }
+
+    .map-consent p{
+      margin:0 0 12px;
+      color:var(--muted);
+      font-size:14px;
+    }
+
     .legal-section{
       padding-top:20px;
     }
@@ -1366,11 +1378,21 @@
           <a class="btn btn-light" href="tel:+491626117789">Jetzt anrufen</a>
         </div>
 
-        <div class="map-box">
+        <div class="map-box" id="mapContainer">
+          <div class="map-consent" id="mapConsent">
+            <p>
+              Zur Anzeige der Karte wird ein externer Dienst (Google Maps) nachgeladen.
+              Dabei können personenbezogene Daten (z. B. IP-Adresse) an Google übertragen werden.
+            </p>
+            <button class="btn btn-primary" type="button" id="loadMapBtn">Google Maps laden</button>
+          </div>
           <iframe
-            src="https://maps.google.com/maps?q=Hohes%20Feld%203%2C%2031787%20Hameln%2C%20Deutschland&t=&z=15&ie=UTF8&iwloc=&output=embed"
+            id="mapFrame"
+            data-src="https://maps.google.com/maps?q=Hohes%20Feld%203%2C%2031787%20Hameln%2C%20Deutschland&t=&z=15&ie=UTF8&iwloc=&output=embed"
             loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Google Maps Standort von TecNova"
+            style="display:none">
           </iframe>
         </div>
       </div>
@@ -1447,16 +1469,19 @@
               Telefon: 01626117789
             </p>
 
-            <h3>2. Hosting</h3>
+            <h3>2. Zwecke und Rechtsgrundlagen</h3>
             <p>
-              Diese Website wird über GitHub Pages ausgeliefert. Beim Aufruf der Website können technisch
-              erforderliche Zugriffsdaten verarbeitet werden, etwa IP-Adresse, Datum und Uhrzeit, Browsertyp
-              und Betriebssystem.
+              Wir verarbeiten personenbezogene Daten nur, soweit dies erforderlich ist:
+              <br>• Bereitstellung der Website und technische Sicherheit (Art. 6 Abs. 1 lit. f DSGVO)
+              <br>• Bearbeitung von Kontaktanfragen per Telefon, E-Mail oder WhatsApp (Art. 6 Abs. 1 lit. b und/oder lit. f DSGVO)
+              <br>• Anzeige einer externen Karte (Google Maps) nur nach deiner aktiven Auswahl über die Schaltfläche „Google Maps laden“ (Art. 6 Abs. 1 lit. a DSGVO).
             </p>
 
-            <h3>3. Zweck der Verarbeitung</h3>
+            <h3>3. Hosting und Server-Logfiles</h3>
             <p>
-              Die Verarbeitung erfolgt zur Bereitstellung der Website und zur Sicherstellung des technischen Betriebs.
+              Diese Website wird über GitHub Pages ausgeliefert. Beim Aufruf der Website können technisch erforderliche
+              Zugriffsdaten verarbeitet werden (z. B. IP-Adresse, Datum/Uhrzeit, angefragte Seite, Browsertyp, Betriebssystem).
+              Diese Verarbeitung ist erforderlich, um die Website zuverlässig bereitzustellen und die Systemsicherheit zu gewährleisten.
             </p>
 
             <h3>4. Kontaktaufnahme</h3>
@@ -1465,22 +1490,47 @@
               ausschließlich zur Bearbeitung deiner Anfrage verarbeitet.
             </p>
 
-            <h3>5. Keine Analyse / keine zusätzlichen Cookies</h3>
+            <h3>5. Externer Dienst: Google Maps</h3>
             <p>
-              Diese Website verwendet in dieser Version keine eingebundenen Analyse- oder Marketing-Tools
-              und setzt selbst keine zusätzlichen nicht notwendigen Cookies.
+              Auf dieser Website ist Google Maps zunächst deaktiviert. Erst wenn du aktiv auf „Google Maps laden“ klickst,
+              wird eine Verbindung zu Google hergestellt. Dabei können personenbezogene Daten (insbesondere IP-Adresse und
+              Nutzungsdaten) an Google übermittelt werden. Eine Verarbeitung kann auch außerhalb der EU/des EWR stattfinden.
+              Weitere Informationen findest du in der Datenschutzerklärung von Google.
             </p>
 
-            <h3>6. Betroffenenrechte</h3>
+            <h3>6. Empfänger der Daten</h3>
             <p>
-              Du hast im Rahmen der gesetzlichen Vorschriften das Recht auf Auskunft, Berichtigung, Löschung,
-              Einschränkung der Verarbeitung sowie Widerspruch gegen die Verarbeitung personenbezogener Daten.
+              Empfänger können technische Dienstleister sein, die für den Betrieb der Website erforderlich sind
+              (insbesondere Hosting-Infrastruktur über GitHub Pages) sowie – bei aktiver Kartenfreigabe – Google.
             </p>
 
-            <h3>7. Hinweis</h3>
+            <h3>7. Speicherdauer</h3>
             <p>
-              Diese Fassung ist für eine statische Website ohne Kontaktformular, Tracking-Skripte oder
-              externe Marketing-Dienste gedacht. Bei späteren Erweiterungen muss der Text angepasst werden.
+              Wir speichern personenbezogene Daten nur so lange, wie es für die jeweiligen Zwecke erforderlich ist
+              oder gesetzliche Aufbewahrungspflichten bestehen.
+            </p>
+
+            <h3>8. Betroffenenrechte</h3>
+            <p>
+              Du hast nach Maßgabe der gesetzlichen Vorschriften insbesondere das Recht auf Auskunft, Berichtigung,
+              Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit sowie Widerspruch gegen Verarbeitungen
+              auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Erteilte Einwilligungen kannst du jederzeit mit Wirkung
+              für die Zukunft widerrufen.
+            </p>
+
+            <h3>9. Beschwerderecht bei einer Aufsichtsbehörde</h3>
+            <p>
+              Du hast das Recht, dich bei einer Datenschutz-Aufsichtsbehörde zu beschweren.
+              Zuständig ist insbesondere:
+              Die Landesbeauftragte für den Datenschutz Niedersachsen,
+              Prinzenstraße 5, 30159 Hannover,
+              <a href="https://lfd.niedersachsen.de" target="_blank" rel="noopener">lfd.niedersachsen.de</a>.
+            </p>
+
+            <h3>10. Stand und Änderungen</h3>
+            <p>
+              Diese Datenschutzerklärung wird bei technischen oder rechtlichen Änderungen aktualisiert.
+              Stand: April 2026.
             </p>
           </div>
         </details>
@@ -1563,6 +1613,18 @@
     document.querySelectorAll('.reveal').forEach(el=>{
       observer.observe(el);
     });
+
+    const loadMapBtn = document.getElementById('loadMapBtn');
+    const mapFrame = document.getElementById('mapFrame');
+    const mapConsent = document.getElementById('mapConsent');
+
+    if(loadMapBtn && mapFrame && mapConsent){
+      loadMapBtn.addEventListener('click', function(){
+        mapFrame.src = mapFrame.dataset.src;
+        mapFrame.style.display = 'block';
+        mapConsent.style.display = 'none';
+      });
+    }
   </script>
 </body>
 </html>
