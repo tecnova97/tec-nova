@@ -4,26 +4,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>TecNova FTTH | Glasfaser Hameln & FTTH Montage Deutschland</title>
+  <title>TecNova | Glasfaser Hameln & FTTH Montage Deutschland</title>
   <meta name="description" content="TecNova FTTH aus Hameln – Professionelle Glasfaserarbeiten, FTTH Montage, Einblasen und Netzinfrastruktur in Deutschland. Zuverlässig, sauber und direkt erreichbar.">
   <meta name="keywords" content="TecNova FTTH, TecNova, Glasfaser Hameln, FTTH Montage Deutschland, Glasfaser Einblasen, Glasfaser Montage, Netzinfrastruktur, FTTH, FTTX, Hameln Glasfaser">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="author" content="TecNova FTTH">
+  <meta name="application-name" content="TecNova">
+  <meta name="apple-mobile-web-app-title" content="TecNova">
   <meta name="theme-color" content="#081120">
   <link rel="canonical" href="https://tec-nova.de/">
-  <link rel="icon" href="/logo-round.png" type="image/png">
+  <link rel="icon" href="/logo-round.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/logo-round.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon" href="/logo-round.png">
+  <link rel="shortcut icon" href="/logo-round.png" type="image/png">
 
   <meta property="og:type" content="website">
   <meta property="og:locale" content="de_DE">
-  <meta property="og:site_name" content="TecNova FTTH">
-  <meta property="og:title" content="TecNova FTTH">
+  <meta property="og:site_name" content="TecNova">
+  <meta property="og:title" content="TecNova">
   <meta property="og:description" content="Glasfaser Hameln & FTTH Montage Deutschland">
   <meta property="og:url" content="https://tec-nova.de/">
   <meta property="og:image" content="https://tec-nova.de/logo.png">
   <meta property="og:image:alt" content="TecNova FTTH Logo">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="TecNova FTTH">
+  <meta name="twitter:title" content="TecNova">
   <meta name="twitter:description" content="Glasfaser Hameln & FTTH Montage Deutschland">
   <meta name="twitter:image" content="https://tec-nova.de/logo.png">
 
@@ -69,7 +74,8 @@
         "@type": "WebSite",
         "@id": "https://tec-nova.de/#website",
         "url": "https://tec-nova.de/",
-        "name": "TecNova FTTH",
+        "name": "TecNova",
+        "alternateName": "TecNova FTTH",
         "inLanguage": "de-DE"
       }
     ]
@@ -201,6 +207,21 @@
       gap:12px;
     }
 
+    .lang-select{
+      min-width:120px;
+      height:44px;
+      border-radius:12px;
+      border:1px solid rgba(255,255,255,.22);
+      background:rgba(255,255,255,.08);
+      color:#fff;
+      padding:0 10px;
+      font-weight:600;
+    }
+
+    .lang-select option{
+      color:#102038;
+    }
+
     .menu-toggle{
       display:none;
       width:48px;
@@ -259,16 +280,6 @@
 
     .btn-light:hover{
       box-shadow:0 16px 30px rgba(8,17,32,.14);
-    }
-
-    .btn-whatsapp{
-      background:#15c95b;
-      color:#fff;
-      box-shadow:0 14px 34px rgba(21,201,91,.24);
-    }
-
-    .btn-whatsapp:hover{
-      box-shadow:0 18px 40px rgba(21,201,91,.34);
     }
 
     .hero{
@@ -743,6 +754,44 @@
       margin-top:18px;
     }
 
+    .contact-form{
+      margin-top:18px;
+      display:grid;
+      gap:12px;
+      padding:16px;
+      border:1px solid var(--line);
+      border-radius:18px;
+      background:#f8fbff;
+    }
+
+    .contact-form label{
+      font-size:14px;
+      font-weight:700;
+      color:#22344f;
+    }
+
+    .contact-form input,
+    .contact-form textarea{
+      width:100%;
+      border:1px solid #cfd9e5;
+      border-radius:12px;
+      padding:12px;
+      font:inherit;
+      color:var(--text);
+      background:#fff;
+    }
+
+    .contact-form textarea{
+      min-height:120px;
+      resize:vertical;
+    }
+
+    .form-note{
+      margin:0;
+      font-size:13px;
+      color:var(--muted);
+    }
+
     .mini-box{
       background:var(--soft);
       border:1px solid #dfeaf5;
@@ -950,6 +999,21 @@
       transform:translateY(0);
     }
 
+    .more-btn{
+      margin-top:10px;
+    }
+
+    .card-extra{
+      display:none;
+      margin-top:8px;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .card-extra.open{
+      display:block;
+    }
+
     @keyframes floatLogo{
       0%{transform:translateY(0)}
       50%{transform:translateY(-12px)}
@@ -1018,6 +1082,10 @@
         width:100%;
       }
 
+      .lang-select{
+        width:100%;
+      }
+
       h1{
         font-size:48px;
       }
@@ -1068,6 +1136,13 @@
       </nav>
 
       <div class="nav-actions">
+        <select id="languageSwitcher" class="lang-select" aria-label="Sprache wählen">
+          <option value="de">DE</option>
+          <option value="en">EN</option>
+          <option value="ar">AR</option>
+          <option value="ru">RU</option>
+          <option value="tr">TR</option>
+        </select>
         <a class="btn btn-secondary" href="tel:+491626117789">Anrufen</a>
         <a class="btn btn-primary" href="#kontakt">Projekt anfragen</a>
       </div>
@@ -1097,7 +1172,6 @@
         <div class="hero-actions">
           <a class="btn btn-primary" href="#kontakt">Jetzt anfragen</a>
           <a class="btn btn-secondary" href="#projekte">Bilder ansehen</a>
-          <a class="btn btn-whatsapp" href="https://wa.me/491626117789" target="_blank" rel="noopener">WhatsApp</a>
         </div>
 
         <div class="hero-stats">
@@ -1172,18 +1246,30 @@
           <div class="icon-box">◉</div>
           <h3>Glasfaser Einblasen</h3>
           <p>Ausführung im Rahmen von Glasfaserprojekten mit strukturiertem Arbeitsablauf und technischem Fokus.</p>
+          <button class="btn btn-light more-btn" type="button" data-more-target="cardMore1">Mehr erfahren</button>
+          <p class="card-extra" id="cardMore1">
+            Geeignet für Neubau- und Bestandsprojekte mit sauberer Dokumentation und klaren Übergabepunkten.
+          </p>
         </div>
 
         <div class="card reveal">
           <div class="icon-box">⌁</div>
           <h3>FTTH / FTTX Umfeld</h3>
           <p>Unterstützung bei Ausbauprojekten und Tätigkeiten im Bereich moderner Netzinfrastruktur.</p>
+          <button class="btn btn-light more-btn" type="button" data-more-target="cardMore2">Mehr erfahren</button>
+          <p class="card-extra" id="cardMore2">
+            Fokus auf strukturierte Abläufe zwischen Netzpunkt, Gebäudezugang und Inhouse-Strecken.
+          </p>
         </div>
 
         <div class="card reveal">
           <div class="icon-box">⚙</div>
           <h3>Montage</h3>
           <p>Praktische Montage- und Installationsarbeiten mit professioneller Außendarstellung für Auftraggeber.</p>
+          <button class="btn btn-light more-btn" type="button" data-more-target="cardMore3">Mehr erfahren</button>
+          <p class="card-extra" id="cardMore3">
+            Flexible Einsätze für Teams und Auftraggeber mit direkter Abstimmung vor Ort.
+          </p>
         </div>
       </div>
     </div>
@@ -1371,13 +1457,26 @@
             <p><a href="mailto:info@tec-nova.de">info@tec-nova.de</a></p>
           </div>
         </div>
-
         <div class="hero-actions" style="margin-top:20px">
           <a class="btn btn-primary" href="mailto:info@tec-nova.de">E-Mail senden</a>
-          <a class="btn btn-whatsapp" href="https://wa.me/491626117789" target="_blank" rel="noopener">WhatsApp schreiben</a>
           <a class="btn btn-light" href="tel:+491626117789">Jetzt anrufen</a>
         </div>
 
+        <form class="contact-form" action="mailto:info@tec-nova.de" method="post" enctype="text/plain">
+          <label for="contactName">Name</label>
+          <input id="contactName" name="Name" type="text" required>
+
+          <label for="contactEmail">E-Mail</label>
+          <input id="contactEmail" name="E-Mail" type="email" required>
+
+          <label for="contactMessage">Nachricht</label>
+          <textarea id="contactMessage" name="Nachricht" required></textarea>
+
+          <button class="btn btn-primary" type="submit">Direkt an TecNova senden</button>
+          <p class="form-note">
+            Beim Senden öffnet sich dein E-Mail-Programm mit vorausgefüllter Nachricht.
+          </p>
+        </form>
         <div class="map-box" id="mapContainer">
           <div class="map-consent" id="mapConsent">
             <p>
@@ -1473,7 +1572,7 @@
             <p>
               Wir verarbeiten personenbezogene Daten nur, soweit dies erforderlich ist:
               <br>• Bereitstellung der Website und technische Sicherheit (Art. 6 Abs. 1 lit. f DSGVO)
-              <br>• Bearbeitung von Kontaktanfragen per Telefon, E-Mail oder WhatsApp (Art. 6 Abs. 1 lit. b und/oder lit. f DSGVO)
+              <br>• Bearbeitung von Kontaktanfragen per Telefon oder E-Mail (Art. 6 Abs. 1 lit. b und/oder lit. f DSGVO)
               <br>• Anzeige einer externen Karte (Google Maps) nur nach deiner aktiven Auswahl über die Schaltfläche „Google Maps laden“ (Art. 6 Abs. 1 lit. a DSGVO).
             </p>
 
@@ -1486,7 +1585,8 @@
 
             <h3>4. Kontaktaufnahme</h3>
             <p>
-              Wenn du per Telefon, E-Mail oder WhatsApp Kontakt aufnimmst, werden die von dir übermittelten Daten
+
+              Wenn du per Telefon oder E-Mail Kontakt aufnimmst, werden die von dir übermittelten Daten
               ausschließlich zur Bearbeitung deiner Anfrage verarbeitet.
             </p>
 
@@ -1585,6 +1685,13 @@
   </footer>
 
   <script>
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+    window.addEventListener('beforeunload', function () {
+      window.scrollTo(0, 0);
+    });
+
     const nav = document.getElementById('siteNav');
     const toggle = document.getElementById('menuToggle');
 
@@ -1625,6 +1732,118 @@
         mapConsent.style.display = 'none';
       });
     }
+
+    document.querySelectorAll('[data-more-target]').forEach(btn=>{
+      btn.addEventListener('click', function(){
+        const target = document.getElementById(btn.dataset.moreTarget);
+        if(!target) return;
+        target.classList.toggle('open');
+        btn.textContent = target.classList.contains('open') ? 'Weniger anzeigen' : 'Mehr erfahren';
+      });
+    });
+
+    const translations = {
+      de: {
+        call: 'Anrufen',
+        askProject: 'Projekt anfragen',
+        askNow: 'Jetzt anfragen',
+        viewImages: 'Bilder ansehen',
+        directTitle: 'Direkter Kontakt zu TecNova',
+        directText: 'Schnell erreichbar für Glasfaserarbeiten, FTTH Montage und Projektanfragen.',
+        sendEmail: 'E-Mail senden',
+        callNow: 'Jetzt anrufen',
+        formSend: 'Direkt an TecNova senden',
+        formNote: 'Beim Senden öffnet sich dein E-Mail-Programm mit vorausgefüllter Nachricht.'
+      },
+      en: {
+        call: 'Call now',
+        askProject: 'Request project',
+        askNow: 'Request now',
+        viewImages: 'View photos',
+        directTitle: 'Direct contact with TecNova',
+        directText: 'Quick response for fiber work, FTTH installation and project requests.',
+        sendEmail: 'Send email',
+        callNow: 'Call now',
+        formSend: 'Send directly to TecNova',
+        formNote: 'Submitting opens your email app with a prefilled message.'
+      },
+      ar: {
+        call: 'اتصل الآن',
+        askProject: 'اطلب مشروعك',
+        askNow: 'اطلب الآن',
+        viewImages: 'عرض الصور',
+        directTitle: 'تواصل مباشر مع TecNova',
+        directText: 'متاحون بسرعة لأعمال الألياف الضوئية وتركيب FTTH وطلبات المشاريع.',
+        sendEmail: 'إرسال إيميل',
+        callNow: 'اتصال الآن',
+        formSend: 'إرسال مباشر إلى TecNova',
+        formNote: 'عند الإرسال سيفتح برنامج البريد لديك برسالة جاهزة.'
+      },
+      ru: {
+        call: 'Позвонить',
+        askProject: 'Запрос проекта',
+        askNow: 'Отправить запрос',
+        viewImages: 'Смотреть фото',
+        directTitle: 'Прямой контакт с TecNova',
+        directText: 'Быстрая связь по работам FTTH и проектным запросам.',
+        sendEmail: 'Отправить email',
+        callNow: 'Позвонить',
+        formSend: 'Отправить напрямую в TecNova',
+        formNote: 'При отправке откроется почтовое приложение с готовым текстом.'
+      },
+      tr: {
+        call: 'Hemen ara',
+        askProject: 'Proje talebi',
+        askNow: 'Şimdi talep et',
+        viewImages: 'Fotoğrafları gör',
+        directTitle: 'TecNova ile doğrudan iletişim',
+        directText: 'Fiber işleri, FTTH montajı ve proje talepleri için hızlı iletişim.',
+        sendEmail: 'E-posta gönder',
+        callNow: 'Hemen ara',
+        formSend: 'Doğrudan TecNova\'ya gönder',
+        formNote: 'Gönderince e-posta uygulamanız hazır mesaj ile açılır.'
+      }
+    };
+
+    const languageSwitcher = document.getElementById('languageSwitcher');
+    const navCallBtn = document.querySelector('.nav-actions .btn-secondary');
+    const navProjectBtn = document.querySelector('.nav-actions .btn-primary');
+    const heroPrimaryBtn = document.querySelector('.hero-actions .btn-primary');
+    const heroSecondaryBtn = document.querySelector('.hero-actions .btn-secondary');
+    const contactTitle = document.querySelector('#kontakt .section-title h2');
+    const contactText = document.querySelector('#kontakt .section-title p');
+    const contactButtons = document.querySelectorAll('#kontakt .hero-actions .btn');
+    const formSendBtn = document.querySelector('.contact-form button[type=\"submit\"]');
+    const formNote = document.querySelector('.form-note');
+
+    function setLanguage(lang){
+      const t = translations[lang] || translations.de;
+      if(navCallBtn) navCallBtn.textContent = t.call;
+      if(navProjectBtn) navProjectBtn.textContent = t.askProject;
+      if(heroPrimaryBtn) heroPrimaryBtn.textContent = t.askNow;
+      if(heroSecondaryBtn) heroSecondaryBtn.textContent = t.viewImages;
+      if(contactTitle) contactTitle.textContent = t.directTitle;
+      if(contactText) contactText.textContent = t.directText;
+      if(contactButtons[0]) contactButtons[0].textContent = t.sendEmail;
+      if(contactButtons[1]) contactButtons[1].textContent = t.callNow;
+      if(formSendBtn) formSendBtn.textContent = t.formSend;
+      if(formNote) formNote.textContent = t.formNote;
+      document.documentElement.lang = lang;
+      document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+    }
+
+    if(languageSwitcher){
+      languageSwitcher.addEventListener('change', function(){
+        setLanguage(languageSwitcher.value);
+      });
+      setLanguage(languageSwitcher.value);
+    }
+
+    window.addEventListener('load', function () {
+      if (!window.location.hash) {
+        window.scrollTo(0, 0);
+      }
+    });
   </script>
 </body>
 </html>
