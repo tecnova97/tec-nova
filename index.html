@@ -4,26 +4,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>TecNova FTTH | Glasfaser Hameln & FTTH Montage Deutschland</title>
+  <title>TecNova | Glasfaser Hameln & FTTH Montage Deutschland</title>
   <meta name="description" content="TecNova FTTH aus Hameln – Professionelle Glasfaserarbeiten, FTTH Montage, Einblasen und Netzinfrastruktur in Deutschland. Zuverlässig, sauber und direkt erreichbar.">
   <meta name="keywords" content="TecNova FTTH, TecNova, Glasfaser Hameln, FTTH Montage Deutschland, Glasfaser Einblasen, Glasfaser Montage, Netzinfrastruktur, FTTH, FTTX, Hameln Glasfaser">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="author" content="TecNova FTTH">
+  <meta name="application-name" content="TecNova">
+  <meta name="apple-mobile-web-app-title" content="TecNova">
   <meta name="theme-color" content="#081120">
   <link rel="canonical" href="https://tec-nova.de/">
-  <link rel="icon" href="/logo-round.png" type="image/png">
+  <link rel="icon" href="/logo-round.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/logo-round.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon" href="/logo-round.png">
+  <link rel="shortcut icon" href="/logo-round.png" type="image/png">
 
   <meta property="og:type" content="website">
   <meta property="og:locale" content="de_DE">
-  <meta property="og:site_name" content="TecNova FTTH">
-  <meta property="og:title" content="TecNova FTTH">
+  <meta property="og:site_name" content="TecNova">
+  <meta property="og:title" content="TecNova">
   <meta property="og:description" content="Glasfaser Hameln & FTTH Montage Deutschland">
   <meta property="og:url" content="https://tec-nova.de/">
   <meta property="og:image" content="https://tec-nova.de/logo.png">
   <meta property="og:image:alt" content="TecNova FTTH Logo">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="TecNova FTTH">
+  <meta name="twitter:title" content="TecNova">
   <meta name="twitter:description" content="Glasfaser Hameln & FTTH Montage Deutschland">
   <meta name="twitter:image" content="https://tec-nova.de/logo.png">
 
@@ -69,7 +74,8 @@
         "@type": "WebSite",
         "@id": "https://tec-nova.de/#website",
         "url": "https://tec-nova.de/",
-        "name": "TecNova FTTH",
+        "name": "TecNova",
+        "alternateName": "TecNova FTTH",
         "inLanguage": "de-DE"
       }
     ]
@@ -1680,6 +1686,13 @@
   </footer>
 
   <script>
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+    window.addEventListener('beforeunload', function () {
+      window.scrollTo(0, 0);
+    });
+
     const nav = document.getElementById('siteNav');
     const toggle = document.getElementById('menuToggle');
 
@@ -1824,7 +1837,14 @@
       languageSwitcher.addEventListener('change', function(){
         setLanguage(languageSwitcher.value);
       });
+      setLanguage(languageSwitcher.value);
     }
+
+    window.addEventListener('load', function () {
+      if (!window.location.hash) {
+        window.scrollTo(0, 0);
+      }
+    });
   </script>
 </body>
 </html>
