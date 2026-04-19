@@ -1,1531 +1,1588 @@
- (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
-diff --git a/datenschutz.html b/datenschutz.html
-new file mode 100644
-index 0000000000000000000000000000000000000000..1b19110573f0a7ab3aa23a07e19a17131264a5a6
---- /dev/null
-+++ b/datenschutz.html
-@@ -0,0 +1,33 @@
-+<!DOCTYPE html>
-+<html lang="de">
-+<head>
-+  <meta charset="UTF-8">
-+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-+  <title>Datenschutzerklärung | TecNova</title>
-+  <meta name="description" content="Datenschutzerklärung von TecNova.">
-+  <link rel="icon" href="/logo-round.png" type="image/png">
-+  <style>
-+    body{font-family:Arial,Helvetica,sans-serif;margin:0;background:#f4f8fc;color:#102038}
-+    .wrap{max-width:860px;margin:40px auto;padding:24px;background:#fff;border-radius:16px;box-shadow:0 10px 30px rgba(8,17,32,.08)}
-+    a{color:#0f6fff;text-decoration:none} a:hover{text-decoration:underline}
-+    .back{display:inline-block;margin-bottom:18px}
-+  </style>
-+</head>
-+<body>
-+  <main class="wrap">
-+    <a class="back" href="index.html">← Zur Startseite</a>
-+    <h1>Datenschutzerklärung</h1>
-+    <h2>1. Verantwortlicher</h2>
-+    <p>TecNova – Inhaber Abdulkader Salmo, Hohes Feld 3, 31787 Hameln, Deutschland.<br>E-Mail: info@tec-nova.de, Telefon: 01626117789</p>
-+    <h2>2. Zwecke und Rechtsgrundlagen</h2>
-+    <p>Wir verarbeiten personenbezogene Daten nur soweit erforderlich: Bereitstellung der Website (Art. 6 Abs. 1 lit. f DSGVO), Bearbeitung von Kontaktanfragen (Art. 6 Abs. 1 lit. b/f DSGVO), Google Maps nur nach aktiver Auswahl (Art. 6 Abs. 1 lit. a DSGVO).</p>
-+    <h2>3. Hosting und Logfiles</h2>
-+    <p>Diese Website wird über GitHub Pages ausgeliefert. Dabei können technisch notwendige Zugriffsdaten verarbeitet werden.</p>
-+    <h2>4. Externer Dienst Google Maps</h2>
-+    <p>Google Maps wird erst nach Klick auf „Google Maps laden“ verbunden. Dabei können Daten an Google übertragen werden.</p>
-+    <h2>5. Betroffenenrechte</h2>
-+    <p>Du hast Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit und Widerspruch. Außerdem besteht ein Beschwerderecht bei einer Aufsichtsbehörde.</p>
-+    <p>Stand: April 2026.</p>
-+  </main>
-+</body>
-+</html>
-diff --git a/firmendaten.html b/firmendaten.html
-new file mode 100644
-index 0000000000000000000000000000000000000000..55f1c326f2e87724896c19427188c5771482be7c
---- /dev/null
-+++ b/firmendaten.html
-@@ -0,0 +1,40 @@
-+<!DOCTYPE html>
-+<html lang="de">
-+<head>
-+  <meta charset="UTF-8">
-+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-+  <title>Firmendaten | TecNova</title>
-+  <meta name="description" content="Wichtige Unternehmensdaten von TecNova.">
-+  <link rel="icon" href="/logo-round.png" type="image/png">
-+  <style>
-+    body{font-family:Arial,Helvetica,sans-serif;margin:0;background:#f4f8fc;color:#102038}
-+    .wrap{max-width:860px;margin:40px auto;padding:24px;background:#fff;border-radius:16px;box-shadow:0 10px 30px rgba(8,17,32,.08)}
-+    a{color:#0f6fff;text-decoration:none} a:hover{text-decoration:underline}
-+    .back{display:inline-block;margin-bottom:18px}
-+    ul{line-height:1.8}
-+  </style>
-+</head>
-+<body>
-+  <main class="wrap">
-+    <a class="back" href="index.html">← Zur Startseite</a>
-+    <h1>Wichtige Unternehmensdaten</h1>
-+    <ul>
-+      <li><strong>Unternehmen:</strong> TecNova</li>
-+      <li><strong>Inhaber:</strong> Abdulkader Salmo</li>
-+      <li><strong>Rechtsform:</strong> Einzelunternehmer</li>
-+      <li><strong>USt-IdNr.:</strong> DE457603829</li>
-+      <li><strong>Sitz:</strong> Hohes Feld 3, 31787 Hameln, Deutschland</li>
-+      <li><strong>E-Mail:</strong> info@tec-nova.de</li>
-+      <li><strong>Telefon:</strong> 01626117789</li>
-+      <li><strong>Leistungsgebiet:</strong> Hameln und deutschlandweit</li>
-+    </ul>
-+    <h2>Was man hier zusätzlich zeigen kann</h2>
-+    <ul>
-+      <li>Handelsregister-Angaben (falls vorhanden)</li>
-+      <li>Betriebshaftpflicht / Zertifizierungen</li>
-+      <li>Kernleistungen als Kurzprofil</li>
-+      <li>Ansprechpartner für Auftraggeber</li>
-+    </ul>
-+  </main>
-+</body>
-+</html>
-diff --git a/impressum.html b/impressum.html
-new file mode 100644
-index 0000000000000000000000000000000000000000..513e94fd90f903cea3ff719ac60bc53e08ecb5de
---- /dev/null
-+++ b/impressum.html
-@@ -0,0 +1,28 @@
-+<!DOCTYPE html>
-+<html lang="de">
-+<head>
-+  <meta charset="UTF-8">
-+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-+  <title>Impressum | TecNova</title>
-+  <meta name="description" content="Impressum von TecNova gemäß § 5 DDG.">
-+  <link rel="icon" href="/logo-round.png" type="image/png">
-+  <style>
-+    body{font-family:Arial,Helvetica,sans-serif;margin:0;background:#f4f8fc;color:#102038}
-+    .wrap{max-width:860px;margin:40px auto;padding:24px;background:#fff;border-radius:16px;box-shadow:0 10px 30px rgba(8,17,32,.08)}
-+    a{color:#0f6fff;text-decoration:none} a:hover{text-decoration:underline}
-+    .back{display:inline-block;margin-bottom:18px}
-+  </style>
-+</head>
-+<body>
-+  <main class="wrap">
-+    <a class="back" href="index.html">← Zur Startseite</a>
-+    <h1>Impressum</h1>
-+    <h2>Angaben gemäß § 5 DDG</h2>
-+    <p><strong>TecNova</strong><br>Inhaber: Abdulkader Salmo<br>Hohes Feld 3<br>31787 Hameln<br>Deutschland</p>
-+    <h2>Kontakt</h2>
-+    <p>Telefon: <a href="tel:+491626117789">01626117789</a><br>E-Mail: <a href="mailto:info@tec-nova.de">info@tec-nova.de</a></p>
-+    <h2>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
-+    <p>Abdulkader Salmo, Anschrift wie oben.</p>
-+  </main>
-+</body>
-+</html>
-diff --git a/index.html b/index.html
-index 009daad969c6deff8bd58910786561a231a25c21..24e7211c584df9c889f142545e843de6b64bc54f 100644
---- a/index.html
-+++ b/index.html
-@@ -1,99 +1,105 @@
- <!DOCTYPE html>
- <html lang="de">
- <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
- 
--  <title>TecNova FTTH | Glasfaser Hameln & FTTH Montage Deutschland</title>
--  <meta name="description" content="TecNova FTTH aus Hameln – Professionelle Glasfaserarbeiten, FTTH Montage, Einblasen und Netzinfrastruktur in Deutschland. Zuverlässig, sauber und direkt erreichbar.">
-+  <title>TecNova | Glasfaser Hameln & FTTH Montage Deutschland</title>
-+  <meta name="description" content="TecNova FTTH aus Hameln – Professionelle Glasfaserarbeiten, FTTH Montage, Einblasen und Netzinfrastruktur in Deutschland. Zuverlässig, sauber und direkt erreichbar.">
-   <meta name="keywords" content="TecNova FTTH, TecNova, Glasfaser Hameln, FTTH Montage Deutschland, Glasfaser Einblasen, Glasfaser Montage, Netzinfrastruktur, FTTH, FTTX, Hameln Glasfaser">
-   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
--  <meta name="author" content="TecNova FTTH">
--  <meta name="theme-color" content="#081120">
--  <link rel="canonical" href="https://tec-nova.de/">
--  <link rel="icon" href="/logo-round.png" type="image/png">
-+  <meta name="author" content="TecNova FTTH">
-+  <meta name="application-name" content="TecNova">
-+  <meta name="apple-mobile-web-app-title" content="TecNova">
-+  <meta name="theme-color" content="#081120">
-+  <link rel="canonical" href="https://tec-nova.de/">
-+  <link rel="icon" href="/logo-round.png" sizes="32x32" type="image/png">
-+  <link rel="icon" href="/logo-round.png" sizes="192x192" type="image/png">
-+  <link rel="apple-touch-icon" href="/logo-round.png">
-+  <link rel="shortcut icon" href="/logo-round.png" type="image/png">
- 
-   <meta property="og:type" content="website">
-   <meta property="og:locale" content="de_DE">
--  <meta property="og:site_name" content="TecNova FTTH">
--  <meta property="og:title" content="TecNova FTTH">
-+  <meta property="og:site_name" content="TecNova">
-+  <meta property="og:title" content="TecNova">
-   <meta property="og:description" content="Glasfaser Hameln & FTTH Montage Deutschland">
-   <meta property="og:url" content="https://tec-nova.de/">
-   <meta property="og:image" content="https://tec-nova.de/logo.png">
-   <meta property="og:image:alt" content="TecNova FTTH Logo">
- 
-   <meta name="twitter:card" content="summary_large_image">
--  <meta name="twitter:title" content="TecNova FTTH">
-+  <meta name="twitter:title" content="TecNova">
-   <meta name="twitter:description" content="Glasfaser Hameln & FTTH Montage Deutschland">
-   <meta name="twitter:image" content="https://tec-nova.de/logo.png">
- 
-   <meta name="geo.region" content="DE-NI">
-   <meta name="geo.placename" content="Hameln">
-   <meta name="ICBM" content="52.1033, 9.3562">
- 
-   <script type="application/ld+json">
-   {
-     "@context": "https://schema.org",
-     "@graph": [
-       {
-         "@type": "Organization",
-         "@id": "https://tec-nova.de/#organization",
-         "name": "TecNova FTTH",
-         "url": "https://tec-nova.de/",
-         "logo": "https://tec-nova.de/logo.png",
-         "email": "info@tec-nova.de",
-         "telephone": "+491626117789"
-       },
-       {
-         "@type": "LocalBusiness",
-         "@id": "https://tec-nova.de/#localbusiness",
-         "name": "TecNova FTTH",
-         "image": "https://tec-nova.de/logo.png",
-         "url": "https://tec-nova.de/",
-         "telephone": "+491626117789",
-         "email": "info@tec-nova.de",
-         "address": {
-           "@type": "PostalAddress",
-           "streetAddress": "Hohes Feld 3",
-           "postalCode": "31787",
-           "addressLocality": "Hameln",
-           "addressCountry": "DE"
-         },
-         "areaServed": {
-           "@type": "Country",
-           "name": "Deutschland"
-         },
-         "description": "TecNova FTTH bietet professionelle Glasfaserarbeiten, FTTH Montage und Netzinfrastruktur in Deutschland."
-       },
--      {
--        "@type": "WebSite",
--        "@id": "https://tec-nova.de/#website",
--        "url": "https://tec-nova.de/",
--        "name": "TecNova FTTH",
--        "inLanguage": "de-DE"
--      }
-+      {
-+        "@type": "WebSite",
-+        "@id": "https://tec-nova.de/#website",
-+        "url": "https://tec-nova.de/",
-+        "name": "TecNova",
-+        "alternateName": "TecNova FTTH",
-+        "inLanguage": "de-DE"
-+      }
-     ]
-   }
-   </script>
- 
-   <style>
-     :root{
-       --bg:#081120;
-       --bg2:#0c1b33;
-       --card:#ffffff;
-       --text:#102038;
-       --muted:#5f6f85;
-       --line:#dce5ef;
-       --brand:#0f6fff;
-       --brand2:#2ac4ff;
-       --soft:#f4f8fc;
-       --accent:#12b981;
-       --shadow:0 18px 50px rgba(8,17,32,.10);
-       --shadow-strong:0 24px 60px rgba(8,17,32,.18);
-       --radius:24px;
-       --transition:.35s ease;
-     }
- 
-     *{box-sizing:border-box}
-     html{scroll-behavior:smooth}
-     body{
-@@ -105,123 +111,140 @@
-       overflow-x:hidden;
-     }
- 
-     a{text-decoration:none;color:inherit}
-     img{max-width:100%;display:block}
-     .container{width:min(1180px,92%);margin:auto}
- 
-     .topbar{
-       position:sticky;
-       top:0;
-       z-index:1000;
-       background:rgba(30,43,60,.84);
-       backdrop-filter:blur(12px);
-       border-bottom:1px solid rgba(255,255,255,.08);
-     }
- 
-     .nav{
-       min-height:82px;
-       display:flex;
-       align-items:center;
-       justify-content:space-between;
-       gap:18px;
-       position:relative;
-     }
- 
--    .logo{
--      display:flex;
--      align-items:center;
--      gap:16px;
--      color:#fff;
--      font-size:32px;
--      font-weight:700;
--      transition:var(--transition);
--    }
-+    .logo{
-+      display:flex;
-+      align-items:center;
-+      gap:10px;
-+      color:#fff;
-+      font-size:24px;
-+      font-weight:700;
-+      transition:var(--transition);
-+      flex-shrink:0;
-+    }
- 
-     .logo:hover{
-       transform:translateY(-1px);
-     }
- 
--    .logo img{
--      height:110px;
--      width:auto;
--      object-fit:contain;
--      transition:transform .35s ease, filter .35s ease;
--    }
-+    .logo img{
-+      height:62px;
-+      width:auto;
-+      object-fit:contain;
-+      transition:transform .35s ease, filter .35s ease;
-+    }
- 
-     .logo:hover img{
-       transform:scale(1.06) rotate(-2deg);
-       filter:drop-shadow(0 10px 20px rgba(42,196,255,.25));
-     }
- 
--    .logo small{
--      display:block;
--      font-size:11px;
--      letter-spacing:.14em;
--      text-transform:uppercase;
--      color:#95d8ff;
--      margin-top:-3px;
--    }
--
--    .nav-links{
--      display:flex;
--      align-items:center;
--      gap:22px;
--    }
--
--    .nav-links a{
--      color:#dcecff;
--      font-size:15px;
--      position:relative;
--      transition:var(--transition);
--    }
-+    .logo small{
-+      display:block;
-+      font-size:10px;
-+      letter-spacing:.14em;
-+      text-transform:uppercase;
-+      color:#95d8ff;
-+      margin-top:-2px;
-+    }
-+
-+    .nav-links{
-+      display:flex;
-+      align-items:center;
-+      gap:16px;
-+      flex-wrap:wrap;
-+    }
-+
-+    .nav-links a{
-+      color:#dcecff;
-+      font-size:14px;
-+      position:relative;
-+      transition:var(--transition);
-+    }
- 
-     .nav-links a::after{
-       content:"";
-       position:absolute;
-       left:0;
-       bottom:-8px;
-       width:0;
-       height:2px;
-       background:linear-gradient(90deg,var(--brand),var(--brand2));
-       transition:width .3s ease;
-     }
- 
-     .nav-links a:hover{
-       color:#fff;
-       transform:translateY(-2px);
-     }
- 
-     .nav-links a:hover::after{
-       width:100%;
-     }
- 
--    .nav-actions{
--      display:flex;
--      align-items:center;
--      gap:12px;
--    }
-+    .nav-actions{
-+      display:flex;
-+      align-items:center;
-+      gap:12px;
-+    }
-+
-+    .lang-select{
-+      min-width:120px;
-+      height:44px;
-+      border-radius:12px;
-+      border:1px solid rgba(255,255,255,.22);
-+      background:rgba(255,255,255,.08);
-+      color:#fff;
-+      padding:0 10px;
-+      font-weight:600;
-+    }
-+
-+    .lang-select option{
-+      color:#102038;
-+    }
- 
-     .menu-toggle{
-       display:none;
-       width:48px;
-       height:48px;
-       border:none;
-       border-radius:14px;
-       background:rgba(255,255,255,.08);
-       color:#fff;
-       font-size:22px;
-       cursor:pointer;
-     }
- 
-     .btn{
-       display:inline-flex;
-       align-items:center;
-       justify-content:center;
-       gap:10px;
-       padding:14px 22px;
-       border-radius:14px;
-       font-weight:700;
-       border:none;
-       cursor:pointer;
-       transition:transform .25s ease, box-shadow .25s ease, background .25s ease, color .25s ease;
-     }
-@@ -239,61 +262,51 @@
-     .btn-primary:hover{
-       box-shadow:0 18px 40px rgba(15,111,255,.35);
-     }
- 
-     .btn-secondary{
-       background:rgba(255,255,255,.08);
-       color:#fff;
-       border:1px solid rgba(255,255,255,.16);
-     }
- 
-     .btn-secondary:hover{
-       background:rgba(255,255,255,.14);
-     }
- 
-     .btn-light{
-       background:#fff;
-       color:var(--text);
-       border:1px solid var(--line);
-       box-shadow:0 10px 26px rgba(8,17,32,.08);
-     }
- 
-     .btn-light:hover{
-       box-shadow:0 16px 30px rgba(8,17,32,.14);
-     }
- 
--    .btn-whatsapp{
--      background:#15c95b;
--      color:#fff;
--      box-shadow:0 14px 34px rgba(21,201,91,.24);
--    }
--
--    .btn-whatsapp:hover{
--      box-shadow:0 18px 40px rgba(21,201,91,.34);
--    }
--
--    .hero{
-+    .hero{
-       position:relative;
-       overflow:hidden;
-       background:
-         radial-gradient(circle at 15% 15%, rgba(42,196,255,.16), transparent 24%),
-         radial-gradient(circle at 85% 15%, rgba(15,111,255,.20), transparent 20%),
-         linear-gradient(135deg,var(--bg) 0%, var(--bg2) 58%, #154cae 100%);
-       color:#fff;
-     }
- 
-     .hero::before{
-       content:"";
-       position:absolute;
-       width:520px;
-       height:520px;
-       right:-180px;
-       top:-120px;
-       border-radius:50%;
-       background:radial-gradient(circle, rgba(42,196,255,.18), rgba(42,196,255,0) 70%);
-       pointer-events:none;
-       animation:floatGlow 8s ease-in-out infinite;
-     }
- 
-     .hero::after{
-       content:"";
-       position:absolute;
-@@ -714,101 +727,158 @@
-       margin:0;
-       color:var(--muted);
-       font-size:14px;
-     }
- 
-     .contact-wrap{
-       display:grid;
-       grid-template-columns:1fr .9fr;
-       gap:20px;
-     }
- 
-     .contact-card{
-       background:#fff;
-       border:1px solid var(--line);
-       border-radius:28px;
-       padding:30px;
-       box-shadow:var(--shadow);
-       transition:transform .35s ease, box-shadow .35s ease;
-     }
- 
-     .contact-card:hover{
-       transform:translateY(-8px);
-       box-shadow:var(--shadow-strong);
-     }
- 
--    .contact-grid{
--      display:grid;
--      grid-template-columns:1fr 1fr;
--      gap:14px;
--      margin-top:18px;
--    }
-+    .contact-grid{
-+      display:grid;
-+      grid-template-columns:1fr 1fr;
-+      gap:14px;
-+      margin-top:18px;
-+    }
-+
-+    .contact-form{
-+      margin-top:18px;
-+      display:grid;
-+      gap:12px;
-+      padding:16px;
-+      border:1px solid var(--line);
-+      border-radius:18px;
-+      background:#f8fbff;
-+    }
-+
-+    .contact-form label{
-+      font-size:14px;
-+      font-weight:700;
-+      color:#22344f;
-+    }
-+
-+    .contact-form input,
-+    .contact-form textarea{
-+      width:100%;
-+      border:1px solid #cfd9e5;
-+      border-radius:12px;
-+      padding:12px;
-+      font:inherit;
-+      color:var(--text);
-+      background:#fff;
-+    }
-+
-+    .contact-form textarea{
-+      min-height:120px;
-+      resize:vertical;
-+    }
-+
-+    .company-cta{
-+      display:flex;
-+      gap:12px;
-+      flex-wrap:wrap;
-+      margin-top:18px;
-+    }
-+
-+    .form-note{
-+      margin:0;
-+      font-size:13px;
-+      color:var(--muted);
-+    }
- 
-     .mini-box{
-       background:var(--soft);
-       border:1px solid #dfeaf5;
-       border-radius:20px;
-       padding:18px;
-       transition:transform .3s ease, box-shadow .3s ease;
-     }
- 
-     .mini-box:hover{
-       transform:translateY(-4px);
-       box-shadow:0 14px 24px rgba(8,17,32,.08);
-     }
- 
-     .mini-box h4{
-       margin:0 0 6px;
-       font-size:16px;
-     }
- 
-     .mini-box p{
-       margin:0;
-       color:var(--muted);
-       font-size:14px;
-     }
- 
-     .map-box{
-       margin-top:18px;
-       border-radius:20px;
-       overflow:hidden;
-       border:1px solid var(--line);
-       box-shadow:var(--shadow);
-       transition:transform .35s ease, box-shadow .35s ease;
-     }
- 
-     .map-box:hover{
-       transform:translateY(-6px);
-       box-shadow:var(--shadow-strong);
-     }
- 
--    .map-box iframe{
--      width:100%;
--      height:320px;
--      border:0;
--      display:block;
--    }
-+    .map-box iframe{
-+      width:100%;
-+      height:320px;
-+      border:0;
-+      display:block;
-+    }
-+
-+    .map-consent{
-+      padding:20px;
-+      background:#f8fbff;
-+      border-top:1px solid var(--line);
-+    }
-+
-+    .map-consent p{
-+      margin:0 0 12px;
-+      color:var(--muted);
-+      font-size:14px;
-+    }
- 
-     .legal-section{
-       padding-top:20px;
-     }
- 
-     .accordion{
-       display:grid;
-       gap:16px;
-     }
- 
-     details.legal{
-       background:#fff;
-       border:1px solid var(--line);
-       border-radius:22px;
-       overflow:hidden;
-       box-shadow:var(--shadow);
-       transition:box-shadow .3s ease, transform .3s ease;
-     }
- 
-     details.legal:hover{
-       transform:translateY(-4px);
-       box-shadow:var(--shadow-strong);
-     }
- 
-     details.legal[open]{
-@@ -911,55 +981,55 @@
-       padding-top:20px;
-       border-top:1px solid rgba(255,255,255,.08);
-       color:#9fb3d1;
-       font-size:14px;
-     }
- 
-     .footer-logo img{
-       height:120px;
-       width:auto;
-       object-fit:contain;
-       margin-bottom:14px;
-       transition:transform .35s ease, filter .35s ease;
-     }
- 
-     .footer-logo img:hover{
-       transform:scale(1.05);
-       filter:drop-shadow(0 12px 18px rgba(42,196,255,.18));
-     }
- 
-     .reveal{
-       opacity:0;
-       transform:translateY(34px);
-       transition:opacity .8s ease, transform .8s ease;
-     }
- 
--    .reveal.visible{
--      opacity:1;
--      transform:translateY(0);
--    }
--
-+    .reveal.visible{
-+      opacity:1;
-+      transform:translateY(0);
-+    }
-+
-     @keyframes floatLogo{
-       0%{transform:translateY(0)}
-       50%{transform:translateY(-12px)}
-       100%{transform:translateY(0)}
-     }
- 
-     @keyframes floatGlow{
-       0%{transform:translateY(0)}
-       50%{transform:translateY(18px)}
-       100%{transform:translateY(0)}
-     }
- 
-     @media (max-width: 980px){
-       .hero-inner,
-       .grid-3,
-       .two-col,
-       .steps,
-       .contact-wrap,
-       .footer-grid,
-       .hero-stats,
-       .contact-grid,
-       .gallery-grid{
-         grid-template-columns:1fr;
-       }
- 
-@@ -980,135 +1050,143 @@
-         left:4%;
-         right:4%;
-         flex-direction:column;
-         align-items:flex-start;
-         gap:0;
-         background:rgba(8,17,32,.98);
-         border:1px solid rgba(255,255,255,.08);
-         border-radius:20px;
-         padding:10px 0;
-         box-shadow:0 20px 40px rgba(0,0,0,.25);
-       }
- 
-       .nav.open .nav-links a{
-         width:100%;
-         padding:14px 18px;
-       }
- 
-       .nav.open .nav-actions{
-         display:flex;
-         position:absolute;
-         top:calc(82px + 320px);
-         left:4%;
-         right:4%;
-       }
- 
--      .nav.open .nav-actions .btn-primary{
--        width:100%;
--      }
-+      .nav.open .nav-actions .btn-primary{
-+        width:100%;
-+      }
-+
-+      .lang-select{
-+        width:100%;
-+      }
- 
-       h1{
-         font-size:48px;
-       }
- 
--      .logo{
--        font-size:26px;
--      }
--
--      .logo img{
--        height:62px;
--      }
-+      .logo img{
-+        height:54px;
-+      }
- 
-       .hero-logo img{
-         width:min(280px, 82%);
-       }
- 
-       .footer-logo img{
-         height:82px;
-       }
- 
-       .gallery-card img{
-         height:220px;
-       }
- 
-       .cta-band{
-         flex-direction:column;
-         align-items:flex-start;
-       }
-     }
-   </style>
- </head>
- <body>
- 
-   <div class="topbar">
-     <div class="container nav" id="siteNav">
-       <a href="#start" class="logo">
-         <img src="logo-round.png" alt="TecNova Logo">
-         <span>TecNova<small>Glasfaser & Montage</small></span>
-       </a>
- 
--      <nav class="nav-links">
--        <a href="#leistungen">Leistungen</a>
--        <a href="#unternehmen">Unternehmen</a>
--        <a href="#ablauf">Ablauf</a>
--        <a href="#projekte">Projekte</a>
--        <a href="#kontakt">Kontakt</a>
--        <a href="#rechtliches">Rechtliches</a>
--      </nav>
--
--      <div class="nav-actions">
--        <a class="btn btn-secondary" href="tel:+491626117789">Anrufen</a>
--        <a class="btn btn-primary" href="#kontakt">Projekt anfragen</a>
--      </div>
-+      <nav class="nav-links">
-+        <a href="#leistungen">Leistungen</a>
-+        <a href="#unternehmen">Unternehmen</a>
-+        <a href="#ablauf">Ablauf</a>
-+        <a href="#projekte">Projekte</a>
-+        <a href="#kontakt">Kontakt</a>
-+        <a href="firmendaten.html">Firmendaten</a>
-+        <a href="impressum.html">Impressum</a>
-+        <a href="datenschutz.html">Datenschutz</a>
-+      </nav>
-+
-+      <div class="nav-actions">
-+        <select id="languageSwitcher" class="lang-select" aria-label="Sprache wählen">
-+          <option value="de">DE</option>
-+          <option value="en">EN</option>
-+          <option value="ar">AR</option>
-+          <option value="ru">RU</option>
-+          <option value="tr">TR</option>
-+        </select>
-+        <a class="btn btn-secondary" href="tel:+491626117789">Anrufen</a>
-+        <a class="btn btn-primary" href="#kontakt">Projekt anfragen</a>
-+      </div>
- 
-       <button class="menu-toggle" id="menuToggle" aria-label="Menü öffnen">☰</button>
-     </div>
-   </div>
- 
-   <header class="hero" id="start">
-     <div class="container hero-inner">
-       <div class="reveal">
-         <div class="eyebrow">Netzinfrastruktur · FTTH / FTTX · Montage</div>
-         <h1>TecNova – Glasfaser Einblasen und FTTH Montage in Deutschland</h1>
- 
-         <p>
-           TecNova (auch geschrieben als tecnova, tec nova oder Tec Nova) ist Ihr Ansprechpartner für Glasfaser Einblasen und Montage in Deutschland.
-         </p>
- 
-         <p>
-           Wir bieten professionelle Glasfaserarbeiten, FTTH Montage und Unterstützung beim Ausbau moderner Netzinfrastruktur für Unternehmen und Projekte in ganz Deutschland.
-         </p>
- 
-         <p>
-           Unser Unternehmensstandort ist in Hameln. TecNova arbeitet jedoch nicht nur lokal, sondern unterstützt Projekte bundesweit.
-         </p>
- 
--        <div class="hero-actions">
--          <a class="btn btn-primary" href="#kontakt">Jetzt anfragen</a>
--          <a class="btn btn-secondary" href="#projekte">Bilder ansehen</a>
--          <a class="btn btn-whatsapp" href="https://wa.me/491626117789" target="_blank" rel="noopener">WhatsApp</a>
--        </div>
-+        <div class="hero-actions">
-+          <a class="btn btn-primary" href="#kontakt">Jetzt anfragen</a>
-+          <a class="btn btn-secondary" href="#projekte">Bilder ansehen</a>
-+        </div>
- 
-         <div class="hero-stats">
-           <div class="stat">
-             <strong>Glasfaser</strong>
-             <span>Einblasen und Montage</span>
-           </div>
-           <div class="stat">
-             <strong>Hameln</strong>
-             <span>Standort Deutschland</span>
-           </div>
-           <div class="stat">
-             <strong>FTTH</strong>
-             <span>Montage deutschlandweit</span>
-           </div>
-         </div>
-       </div>
- 
-       <div class="hero-panel reveal">
-         <div class="hero-logo">
-           <img src="logo2.png" alt="TecNova Rundlogo">
-         </div>
- 
-         <div class="panel-head">
-           <span class="dot"></span>
-           <span class="dot"></span>
-@@ -1133,88 +1211,93 @@
-           </div>
- 
-           <div class="service-item">
-             <div class="service-icon">03</div>
-             <div>
-               <h3>Projektunterstützung</h3>
-               <p>Zuverlässige Einbindung in laufende Ausbauprojekte mit direkter Kommunikation und sauberer Umsetzung.</p>
-             </div>
-           </div>
-         </div>
-       </div>
-     </div>
-   </header>
- 
-   <section id="leistungen">
-     <div class="container">
-       <div class="section-title reveal">
-         <span>Leistungen</span>
-         <h2>Glasfaserarbeiten, FTTH Montage und Netzinfrastruktur</h2>
-         <p>
-           TecNova unterstützt Projekte im Bereich Glasfaser Einblasen, FTTH Montage, FTTX Umfeld und technischer Netzinfrastruktur
-           in Hameln und deutschlandweit.
-         </p>
-       </div>
- 
--      <div class="grid-3">
--        <div class="card reveal">
--          <div class="icon-box">◉</div>
--          <h3>Glasfaser Einblasen</h3>
--          <p>Ausführung im Rahmen von Glasfaserprojekten mit strukturiertem Arbeitsablauf und technischem Fokus.</p>
--        </div>
--
--        <div class="card reveal">
--          <div class="icon-box">⌁</div>
--          <h3>FTTH / FTTX Umfeld</h3>
--          <p>Unterstützung bei Ausbauprojekten und Tätigkeiten im Bereich moderner Netzinfrastruktur.</p>
--        </div>
--
--        <div class="card reveal">
--          <div class="icon-box">⚙</div>
--          <h3>Montage</h3>
--          <p>Praktische Montage- und Installationsarbeiten mit professioneller Außendarstellung für Auftraggeber.</p>
--        </div>
--      </div>
-+      <div class="grid-3">
-+        <div class="card reveal">
-+          <div class="icon-box">◉</div>
-+          <h3>Glasfaser Einblasen</h3>
-+          <p>Ausführung im Rahmen von Glasfaserprojekten mit strukturiertem Arbeitsablauf und technischem Fokus.</p>
-+        </div>
-+
-+        <div class="card reveal">
-+          <div class="icon-box">⌁</div>
-+          <h3>FTTH / FTTX Umfeld</h3>
-+          <p>Unterstützung bei Ausbauprojekten und Tätigkeiten im Bereich moderner Netzinfrastruktur.</p>
-+        </div>
-+
-+        <div class="card reveal">
-+          <div class="icon-box">⚙</div>
-+          <h3>Montage</h3>
-+          <p>Praktische Montage- und Installationsarbeiten mit professioneller Außendarstellung für Auftraggeber.</p>
-+        </div>
-+      </div>
-     </div>
-   </section>
- 
-   <section id="unternehmen">
-     <div class="container two-col">
-       <div class="soft-card reveal">
-         <div class="section-title" style="margin-bottom:14px">
-           <span>Unternehmen</span>
-           <h2>TecNova aus Hameln</h2>
-           <p>Einzelunternehmen mit klarer Spezialisierung.</p>
-         </div>
- 
--        <p>
--          TecNova ist ein <strong>Einzelunternehmen</strong> im Bereich <strong>Glasfaser Einblasen und FTTH Montage</strong>.
--          Der Fokus liegt auf zuverlässiger Ausführung, sauberer Arbeit und direkter Erreichbarkeit für Auftraggeber
--          in <strong>Hameln</strong> und in ganz <strong>Deutschland</strong>.
--        </p>
--
--        <div class="badge-line">
-+        <p>
-+          TecNova ist ein <strong>Einzelunternehmen</strong> im Bereich <strong>Glasfaser Einblasen und FTTH Montage</strong>.
-+          Der Fokus liegt auf zuverlässiger Ausführung, sauberer Arbeit und direkter Erreichbarkeit für Auftraggeber
-+          in <strong>Hameln</strong> und in ganz <strong>Deutschland</strong>.
-+        </p>
-+
-+        <div class="company-cta">
-+          <a class="btn btn-primary" href="mailto:info@tec-nova.de">E-Mail senden</a>
-+          <a class="btn btn-light" href="tel:+491626117789">Jetzt anrufen</a>
-+        </div>
-+
-+        <div class="badge-line">
-           <span class="tag">Einzelunternehmer</span>
-           <span class="tag">Glasfaser</span>
-           <span class="tag">FTTH Montage</span>
-           <span class="tag">Hameln</span>
-         </div>
-       </div>
- 
-       <div class="soft-card reveal">
-         <div class="section-title" style="margin-bottom:14px">
-           <span>Vorteile</span>
-           <h2>Warum Auftraggeber TecNova wählen</h2>
-           <p>Professionell, strukturiert und direkt.</p>
-         </div>
- 
-         <ul class="list">
-           <li>Fokus auf Glasfaser Einblasen und FTTH Montage</li>
-           <li>Direkte Kommunikation ohne Umwege</li>
-           <li>Praxisnahe Erfahrung mit realen Projekten</li>
-           <li>Saubere Darstellung für Auftraggeber und Partner</li>
-           <li>Standort in Hameln mit Einsatz deutschlandweit</li>
-           <li>Responsive Website und klarer Firmenauftritt</li>
-         </ul>
-       </div>
-     </div>
-   </section>
-@@ -1338,231 +1421,372 @@
-           <p>Schnell erreichbar für Glasfaserarbeiten, FTTH Montage und Projektanfragen.</p>
-         </div>
- 
-         <div class="contact-grid">
-           <div class="mini-box">
-             <h4>Unternehmen</h4>
-             <p>TecNova<br>Inhaber: Abdulkader Salmo</p>
-           </div>
- 
-           <div class="mini-box">
-             <h4>Adresse</h4>
-             <p>Hohes Feld 3<br>31787 Hameln<br>Deutschland</p>
-           </div>
- 
-           <div class="mini-box">
-             <h4>Telefon</h4>
-             <p><a href="tel:+491626117789">01626117789</a></p>
-           </div>
- 
-           <div class="mini-box">
-             <h4>E-Mail</h4>
-             <p><a href="mailto:info@tec-nova.de">info@tec-nova.de</a></p>
-           </div>
-         </div>
- 
--        <div class="hero-actions" style="margin-top:20px">
--          <a class="btn btn-primary" href="mailto:info@tec-nova.de">E-Mail senden</a>
--          <a class="btn btn-whatsapp" href="https://wa.me/491626117789" target="_blank" rel="noopener">WhatsApp schreiben</a>
--          <a class="btn btn-light" href="tel:+491626117789">Jetzt anrufen</a>
--        </div>
--
--        <div class="map-box">
--          <iframe
--            src="https://maps.google.com/maps?q=Hohes%20Feld%203%2C%2031787%20Hameln%2C%20Deutschland&t=&z=15&ie=UTF8&iwloc=&output=embed"
--            loading="lazy"
--            referrerpolicy="no-referrer-when-downgrade">
--          </iframe>
--        </div>
--      </div>
--
--      <div class="contact-card reveal">
--        <div class="section-title" style="margin-bottom:10px">
--          <span>Firmendaten</span>
--          <h2>Wichtige Unternehmensdaten</h2>
--          <p>Nur das Wesentliche, klar und professionell dargestellt.</p>
--        </div>
--
--        <div class="mini-box" style="margin-bottom:14px">
--          <h4>Rechtsform</h4>
--          <p>Einzelunternehmer</p>
--        </div>
--
--        <div class="mini-box">
--          <h4>USt-IdNr.</h4>
--          <p>DE457603829</p>
--        </div>
--      </div>
--    </div>
--  </section>
--
--  <section class="legal-section" id="rechtliches">
--    <div class="container">
--      <div class="section-title reveal">
--        <span>Rechtliches</span>
--        <h2>Impressum und Datenschutz</h2>
--        <p>Klare rechtliche Informationen für einen professionellen Firmenauftritt in Deutschland.</p>
--      </div>
--
--      <div class="accordion">
--        <details class="legal reveal" open>
--          <summary>Impressum <span>＋</span></summary>
--          <div class="legal-body">
--            <h3>Angaben gemäß § 5 DDG</h3>
--            <p>
--              <strong>TecNova</strong><br>
--              Inhaber: Abdulkader Salmo<br>
--              Hohes Feld 3<br>
--              31787 Hameln<br>
--              Deutschland
--            </p>
--
--            <p>
--              <strong>Kontakt</strong><br>
--              Telefon: 01626117789<br>
--              E-Mail: info@tec-nova.de
--            </p>
--
--            <p>
--              <strong>Unternehmensangaben</strong><br>
--              Rechtsform: Einzelunternehmer<br>
--              USt-IdNr.: DE457603829
--            </p>
--
--            <p>
--              <strong>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</strong><br>
--              Abdulkader Salmo, Anschrift wie oben.
--            </p>
--          </div>
--        </details>
--
--        <details class="legal reveal">
--          <summary>Datenschutzerklärung <span>＋</span></summary>
--          <div class="legal-body">
--            <h3>1. Verantwortlicher</h3>
--            <p>
--              Verantwortlich für die Datenverarbeitung auf dieser Website ist:<br>
--              TecNova – Inhaber Abdulkader Salmo<br>
--              Hohes Feld 3, 31787 Hameln, Deutschland<br>
--              E-Mail: info@tec-nova.de<br>
--              Telefon: 01626117789
--            </p>
--
--            <h3>2. Hosting</h3>
--            <p>
--              Diese Website wird über GitHub Pages ausgeliefert. Beim Aufruf der Website können technisch
--              erforderliche Zugriffsdaten verarbeitet werden, etwa IP-Adresse, Datum und Uhrzeit, Browsertyp
--              und Betriebssystem.
--            </p>
--
--            <h3>3. Zweck der Verarbeitung</h3>
--            <p>
--              Die Verarbeitung erfolgt zur Bereitstellung der Website und zur Sicherstellung des technischen Betriebs.
--            </p>
--
--            <h3>4. Kontaktaufnahme</h3>
--            <p>
--              Wenn du per Telefon, E-Mail oder WhatsApp Kontakt aufnimmst, werden die von dir übermittelten Daten
--              ausschließlich zur Bearbeitung deiner Anfrage verarbeitet.
--            </p>
--
--            <h3>5. Keine Analyse / keine zusätzlichen Cookies</h3>
--            <p>
--              Diese Website verwendet in dieser Version keine eingebundenen Analyse- oder Marketing-Tools
--              und setzt selbst keine zusätzlichen nicht notwendigen Cookies.
--            </p>
--
--            <h3>6. Betroffenenrechte</h3>
--            <p>
--              Du hast im Rahmen der gesetzlichen Vorschriften das Recht auf Auskunft, Berichtigung, Löschung,
--              Einschränkung der Verarbeitung sowie Widerspruch gegen die Verarbeitung personenbezogener Daten.
--            </p>
--
--            <h3>7. Hinweis</h3>
--            <p>
--              Diese Fassung ist für eine statische Website ohne Kontaktformular, Tracking-Skripte oder
--              externe Marketing-Dienste gedacht. Bei späteren Erweiterungen muss der Text angepasst werden.
--            </p>
--          </div>
--        </details>
--      </div>
--    </div>
--  </section>
-+        <div class="hero-actions" style="margin-top:20px">
-+          <a class="btn btn-primary" href="mailto:info@tec-nova.de">E-Mail senden</a>
-+          <a class="btn btn-light" href="tel:+491626117789">Jetzt anrufen</a>
-+        </div>
-+
-+        <form class="contact-form" id="contactForm">
-+          <label for="contactName">Name</label>
-+          <input id="contactName" name="Name" type="text" required>
-+
-+          <label for="contactEmail">E-Mail</label>
-+          <input id="contactEmail" name="E-Mail" type="email" required>
-+
-+          <label for="contactMessage">Nachricht</label>
-+          <textarea id="contactMessage" name="Nachricht" required></textarea>
-+
-+          <button class="btn btn-primary" type="submit">Direkt an TecNova senden</button>
-+          <p class="form-note">
-+            Beim Senden öffnet sich dein E-Mail-Programm mit einer vorbereiteten Nachricht.
-+          </p>
-+        </form>
-+
-+        <div class="map-box" id="mapContainer">
-+          <div class="map-consent" id="mapConsent">
-+            <p>
-+              Zur Anzeige der Karte wird ein externer Dienst (Google Maps) nachgeladen.
-+              Dabei können personenbezogene Daten (z. B. IP-Adresse) an Google übertragen werden.
-+            </p>
-+            <button class="btn btn-primary" type="button" id="loadMapBtn">Google Maps laden</button>
-+          </div>
-+          <iframe
-+            id="mapFrame"
-+            data-src="https://maps.google.com/maps?q=Hohes%20Feld%203%2C%2031787%20Hameln%2C%20Deutschland&t=&z=15&ie=UTF8&iwloc=&output=embed"
-+            loading="lazy"
-+            referrerpolicy="no-referrer-when-downgrade"
-+            title="Google Maps Standort von TecNova"
-+            style="display:none">
-+          </iframe>
-+        </div>
-+      </div>
-+
-+      <div class="contact-card reveal">
-+        <div class="section-title" style="margin-bottom:10px">
-+          <span>Mehr Informationen</span>
-+          <h2>Rechtliches und Firmendaten</h2>
-+          <p>Alle Pflichtangaben findest du jetzt auf separaten, übersichtlichen Seiten.</p>
-+        </div>
-+
-+        <div class="mini-box" style="margin-bottom:12px">
-+          <h4>Impressum</h4>
-+          <p><a href="impressum.html">Zur Impressum-Seite</a></p>
-+        </div>
-+
-+        <div class="mini-box" style="margin-bottom:12px">
-+          <h4>Datenschutzerklärung</h4>
-+          <p><a href="datenschutz.html">Zur Datenschutz-Seite</a></p>
-+        </div>
-+
-+        <div class="mini-box">
-+          <h4>Firmendaten</h4>
-+          <p><a href="firmendaten.html">Zu den Unternehmensdaten</a></p>
-+        </div>
-+      </div>
-+    </div>
-+  </section>
- 
-   <section>
-     <div class="container">
-       <div class="cta-band">
-         <div>
-           <h3>Professionelle Glasfaserlösungen für Ihr Projekt</h3>
-           <p>Kontaktieren Sie TecNova jetzt und erhalten Sie schnell ein unverbindliches Angebot für Glasfaserarbeiten und FTTH Montage.</p>
-         </div>
-         <a class="btn btn-primary" href="#kontakt">Kontakt aufnehmen</a>
-       </div>
-     </div>
-   </section>
- 
-   <footer>
-     <div class="container footer-grid">
-       <div class="reveal">
-         <div class="footer-logo">
-           <img src="logo2.png" alt="TecNova Logo">
-         </div>
-         <p style="margin-top:14px">
-           TecNova – professioneller Firmenauftritt für Glasfaserarbeiten, FTTH Montage, Praxisbilder, Kontakt und rechtliche Informationen.
-         </p>
-       </div>
- 
-       <div class="reveal">
-         <h4>Navigation</h4>
-         <p><a href="#leistungen">Leistungen</a></p>
-         <p><a href="#unternehmen">Unternehmen</a></p>
-         <p><a href="#ablauf">Ablauf</a></p>
-         <p><a href="#projekte">Projekte</a></p>
-         <p><a href="#kontakt">Kontakt</a></p>
-       </div>
- 
--      <div class="reveal">
--        <h4>Rechtliches</h4>
--        <p><a href="#rechtliches">Impressum</a></p>
--        <p><a href="#rechtliches">Datenschutz</a></p>
--        <p><a href="tel:+491626117789">Telefon</a></p>
--        <p><a href="mailto:info@tec-nova.de">E-Mail</a></p>
--      </div>
-+      <div class="reveal">
-+        <h4>Rechtliches</h4>
-+        <p><a href="impressum.html">Impressum</a></p>
-+        <p><a href="datenschutz.html">Datenschutz</a></p>
-+        <p><a href="firmendaten.html">Firmendaten</a></p>
-+        <p><a href="tel:+491626117789">Telefon</a></p>
-+        <p><a href="mailto:info@tec-nova.de">E-Mail</a></p>
-+      </div>
-     </div>
- 
-     <div class="container footer-bottom">
-       © 2026 TecNova. Alle Rechte vorbehalten.
-     </div>
-   </footer>
- 
--  <script>
--    const nav = document.getElementById('siteNav');
-+  <script>
-+    if ('scrollRestoration' in history) {
-+      history.scrollRestoration = 'manual';
-+    }
-+    window.addEventListener('beforeunload', function () {
-+      window.scrollTo(0, 0);
-+    });
-+
-+    const nav = document.getElementById('siteNav');
-     const toggle = document.getElementById('menuToggle');
- 
-     toggle.addEventListener('click', function(){
-       nav.classList.toggle('open');
-       toggle.textContent = nav.classList.contains('open') ? '✕' : '☰';
-     });
- 
-     document.querySelectorAll('.nav-links a').forEach(link=>{
-       link.addEventListener('click', ()=>{
-         nav.classList.remove('open');
-         toggle.textContent = '☰';
-       });
-     });
- 
-     const observer = new IntersectionObserver((entries)=>{
-       entries.forEach(entry=>{
-         if(entry.isIntersecting){
-           entry.target.classList.add('visible');
-         }
-       });
-     }, {
-       threshold: 0.12
-     });
- 
--    document.querySelectorAll('.reveal').forEach(el=>{
--      observer.observe(el);
--    });
--  </script>
-+    document.querySelectorAll('.reveal').forEach(el=>{
-+      observer.observe(el);
-+    });
-+
-+    const loadMapBtn = document.getElementById('loadMapBtn');
-+    const mapFrame = document.getElementById('mapFrame');
-+    const mapConsent = document.getElementById('mapConsent');
-+
-+    if(loadMapBtn && mapFrame && mapConsent){
-+      loadMapBtn.addEventListener('click', function(){
-+        mapFrame.src = mapFrame.dataset.src;
-+        mapFrame.style.display = 'block';
-+        mapConsent.style.display = 'none';
-+      });
-+    }
-+
-+    const translations = {
-+      de: {
-+        nav: ['Leistungen','Unternehmen','Ablauf','Projekte','Kontakt','Firmendaten','Impressum','Datenschutz'],
-+        call: 'Anrufen',
-+        askProject: 'Projekt anfragen',
-+        askNow: 'Jetzt anfragen',
-+        viewImages: 'Bilder ansehen',
-+        companyEmail: 'E-Mail senden',
-+        companyCall: 'Jetzt anrufen',
-+        infoSpan: 'Mehr Informationen',
-+        infoTitle: 'Rechtliches und Firmendaten',
-+        infoText: 'Alle Pflichtangaben findest du jetzt auf separaten, übersichtlichen Seiten.',
-+        legalImpressum: 'Zur Impressum-Seite',
-+        legalData: 'Zur Datenschutz-Seite',
-+        legalCompany: 'Zu den Unternehmensdaten',
-+        directTitle: 'Direkter Kontakt zu TecNova',
-+        directText: 'Schnell erreichbar für Glasfaserarbeiten, FTTH Montage und Projektanfragen.',
-+        sendEmail: 'E-Mail senden',
-+        callNow: 'Jetzt anrufen',
-+        formSend: 'Direkt an TecNova senden',
-+        formNote: 'Beim Senden öffnet sich dein E-Mail-Programm mit einer vorbereiteten Nachricht.'
-+      },
-+      en: {
-+        nav: ['Services','Company','Process','Projects','Contact','Company data','Imprint','Privacy'],
-+        call: 'Call now',
-+        askProject: 'Request project',
-+        askNow: 'Request now',
-+        viewImages: 'View photos',
-+        companyEmail: 'Send email',
-+        companyCall: 'Call now',
-+        infoSpan: 'More information',
-+        infoTitle: 'Legal pages and company data',
-+        infoText: 'All mandatory legal details are now available on separate pages.',
-+        legalImpressum: 'Open imprint page',
-+        legalData: 'Open privacy page',
-+        legalCompany: 'Open company data page',
-+        directTitle: 'Direct contact with TecNova',
-+        directText: 'Quick response for fiber work, FTTH installation and project requests.',
-+        sendEmail: 'Send email',
-+        callNow: 'Call now',
-+        formSend: 'Send directly to TecNova',
-+        formNote: 'Submitting opens your email app with a prefilled message.'
-+      },
-+      ar: {
-+        nav: ['الخدمات','الشركة','آلية العمل','المشاريع','التواصل','بيانات الشركة','البيانات القانونية','الخصوصية'],
-+        call: 'اتصل الآن',
-+        askProject: 'اطلب مشروعك',
-+        askNow: 'اطلب الآن',
-+        viewImages: 'عرض الصور',
-+        companyEmail: 'إرسال إيميل',
-+        companyCall: 'اتصال الآن',
-+        infoSpan: 'معلومات إضافية',
-+        infoTitle: 'البيانات القانونية وبيانات الشركة',
-+        infoText: 'كل المعلومات الإلزامية صارت ضمن صفحات منفصلة وواضحة.',
-+        legalImpressum: 'الانتقال لصفحة البيانات القانونية',
-+        legalData: 'الانتقال لصفحة الخصوصية',
-+        legalCompany: 'الانتقال لصفحة بيانات الشركة',
-+        directTitle: 'تواصل مباشر مع TecNova',
-+        directText: 'متاحون بسرعة لأعمال الألياف الضوئية وتركيب FTTH وطلبات المشاريع.',
-+        sendEmail: 'إرسال إيميل',
-+        callNow: 'اتصال الآن',
-+        formSend: 'إرسال مباشر إلى TecNova',
-+        formNote: 'عند الإرسال سيفتح برنامج البريد لديك برسالة جاهزة.'
-+      },
-+      ru: {
-+        nav: ['Услуги','Компания','Этапы','Проекты','Контакты','Данные компании','Импрессум','Конфиденциальность'],
-+        call: 'Позвонить',
-+        askProject: 'Запрос проекта',
-+        askNow: 'Отправить запрос',
-+        viewImages: 'Смотреть фото',
-+        companyEmail: 'Отправить email',
-+        companyCall: 'Позвонить',
-+        infoSpan: 'Дополнительно',
-+        infoTitle: 'Правовая информация и данные компании',
-+        infoText: 'Все обязательные данные вынесены на отдельные удобные страницы.',
-+        legalImpressum: 'Открыть страницу Imprint',
-+        legalData: 'Открыть страницу Privacy',
-+        legalCompany: 'Открыть страницу данных компании',
-+        directTitle: 'Прямой контакт с TecNova',
-+        directText: 'Быстрая связь по работам FTTH и проектным запросам.',
-+        sendEmail: 'Отправить email',
-+        callNow: 'Позвонить',
-+        formSend: 'Отправить напрямую в TecNova',
-+        formNote: 'При отправке откроется почтовое приложение с готовым текстом.'
-+      },
-+      tr: {
-+        nav: ['Hizmetler','Şirket','Süreç','Projeler','İletişim','Firma bilgileri','Künye','Gizlilik'],
-+        call: 'Hemen ara',
-+        askProject: 'Proje talebi',
-+        askNow: 'Şimdi talep et',
-+        viewImages: 'Fotoğrafları gör',
-+        companyEmail: 'E-posta gönder',
-+        companyCall: 'Hemen ara',
-+        infoSpan: 'Ek bilgiler',
-+        infoTitle: 'Yasal sayfalar ve firma bilgileri',
-+        infoText: 'Zorunlu tüm bilgiler artık ayrı ve düzenli sayfalarda.',
-+        legalImpressum: 'Künye sayfasına git',
-+        legalData: 'Gizlilik sayfasına git',
-+        legalCompany: 'Firma verileri sayfasına git',
-+        directTitle: 'TecNova ile doğrudan iletişim',
-+        directText: 'Fiber işleri, FTTH montajı ve proje talepleri için hızlı iletişim.',
-+        sendEmail: 'E-posta gönder',
-+        callNow: 'Hemen ara',
-+        formSend: 'Doğrudan TecNova\'ya gönder',
-+        formNote: 'Gönderince e-posta uygulamanız hazır mesaj ile açılır.'
-+      }
-+    };
-+
-+    const languageSwitcher = document.getElementById('languageSwitcher');
-+    const navCallBtn = document.querySelector('.nav-actions .btn-secondary');
-+    const navProjectBtn = document.querySelector('.nav-actions .btn-primary');
-+    const navLinks = document.querySelectorAll('.nav-links a');
-+    const heroPrimaryBtn = document.querySelector('.hero-actions .btn-primary');
-+    const heroSecondaryBtn = document.querySelector('.hero-actions .btn-secondary');
-+    const companyButtons = document.querySelectorAll('#unternehmen .company-cta .btn');
-+    const infoSpan = document.querySelector('#kontakt .contact-card:nth-child(2) .section-title span');
-+    const infoTitle = document.querySelector('#kontakt .contact-card:nth-child(2) .section-title h2');
-+    const infoText = document.querySelector('#kontakt .contact-card:nth-child(2) .section-title p');
-+    const infoLinks = document.querySelectorAll('#kontakt .contact-card:nth-child(2) .mini-box p a');
-+    const contactTitle = document.querySelector('#kontakt .section-title h2');
-+    const contactText = document.querySelector('#kontakt .section-title p');
-+    const contactButtons = document.querySelectorAll('#kontakt .hero-actions .btn');
-+    const formSendBtn = document.querySelector('.contact-form button[type=\"submit\"]');
-+    const formNote = document.querySelector('.form-note');
-+    const contactForm = document.getElementById('contactForm');
-+    const contactName = document.getElementById('contactName');
-+    const contactEmail = document.getElementById('contactEmail');
-+    const contactMessage = document.getElementById('contactMessage');
-+
-+    function setLanguage(lang){
-+      const t = translations[lang] || translations.de;
-+      navLinks.forEach((link, i) => {
-+        if (t.nav && t.nav[i]) link.textContent = t.nav[i];
-+      });
-+      if(navCallBtn) navCallBtn.textContent = t.call;
-+      if(navProjectBtn) navProjectBtn.textContent = t.askProject;
-+      if(heroPrimaryBtn) heroPrimaryBtn.textContent = t.askNow;
-+      if(heroSecondaryBtn) heroSecondaryBtn.textContent = t.viewImages;
-+      if(companyButtons[0]) companyButtons[0].textContent = t.companyEmail;
-+      if(companyButtons[1]) companyButtons[1].textContent = t.companyCall;
-+      if(infoSpan) infoSpan.textContent = t.infoSpan;
-+      if(infoTitle) infoTitle.textContent = t.infoTitle;
-+      if(infoText) infoText.textContent = t.infoText;
-+      if(infoLinks[0]) infoLinks[0].textContent = t.legalImpressum;
-+      if(infoLinks[1]) infoLinks[1].textContent = t.legalData;
-+      if(infoLinks[2]) infoLinks[2].textContent = t.legalCompany;
-+      if(contactTitle) contactTitle.textContent = t.directTitle;
-+      if(contactText) contactText.textContent = t.directText;
-+      if(contactButtons[0]) contactButtons[0].textContent = t.sendEmail;
-+      if(contactButtons[1]) contactButtons[1].textContent = t.callNow;
-+      if(formSendBtn) formSendBtn.textContent = t.formSend;
-+      if(formNote) formNote.textContent = t.formNote;
-+      document.documentElement.lang = lang;
-+      document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
-+    }
-+
-+    if(languageSwitcher){
-+      languageSwitcher.addEventListener('change', function(){
-+        setLanguage(languageSwitcher.value);
-+      });
-+      setLanguage(languageSwitcher.value);
-+    }
-+
-+    if(contactForm && contactName && contactEmail && contactMessage){
-+      contactForm.addEventListener('submit', function(e){
-+        e.preventDefault();
-+        const subject = `Kontaktanfrage von ${contactName.value.trim() || 'Website'}`;
-+        const body = [
-+          `Name: ${contactName.value.trim()}`,
-+          `E-Mail: ${contactEmail.value.trim()}`,
-+          '',
-+          'Nachricht:',
-+          contactMessage.value.trim()
-+        ].join('\n');
-+        window.location.href = `mailto:info@tec-nova.de?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-+      });
-+    }
-+
-+    window.addEventListener('load', function () {
-+      if (!window.location.hash) {
-+        window.scrollTo(0, 0);
-+      }
-+    });
-+  </script>
- </body>
- </html>
- 
-EOF
-)
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>TecNova FTTH | Glasfaser Hameln & FTTH Montage Deutschland</title>
+  <meta name="description" content="TecNova FTTH aus Hameln – Professionelle Glasfaserarbeiten, FTTH Montage, Einblasen und Netzinfrastruktur in Deutschland. Zuverlässig, sauber und direkt erreichbar.">
+  <meta name="keywords" content="TecNova FTTH, TecNova, Glasfaser Hameln, FTTH Montage Deutschland, Glasfaser Einblasen, Glasfaser Montage, Netzinfrastruktur, FTTH, FTTX, Hameln Glasfaser">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="TecNova FTTH">
+  <meta name="theme-color" content="#081120">
+  <link rel="canonical" href="https://tec-nova.de/">
+  <link rel="icon" href="/logo-round.png" type="image/png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:site_name" content="TecNova FTTH">
+  <meta property="og:title" content="TecNova FTTH">
+  <meta property="og:description" content="Glasfaser Hameln & FTTH Montage Deutschland">
+  <meta property="og:url" content="https://tec-nova.de/">
+  <meta property="og:image" content="https://tec-nova.de/logo.png">
+  <meta property="og:image:alt" content="TecNova FTTH Logo">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="TecNova FTTH">
+  <meta name="twitter:description" content="Glasfaser Hameln & FTTH Montage Deutschland">
+  <meta name="twitter:image" content="https://tec-nova.de/logo.png">
+
+  <meta name="geo.region" content="DE-NI">
+  <meta name="geo.placename" content="Hameln">
+  <meta name="ICBM" content="52.1033, 9.3562">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://tec-nova.de/#organization",
+        "name": "TecNova FTTH",
+        "url": "https://tec-nova.de/",
+        "logo": "https://tec-nova.de/logo.png",
+        "email": "info@tec-nova.de",
+        "telephone": "+491626117789"
+      },
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://tec-nova.de/#localbusiness",
+        "name": "TecNova FTTH",
+        "image": "https://tec-nova.de/logo.png",
+        "url": "https://tec-nova.de/",
+        "telephone": "+491626117789",
+        "email": "info@tec-nova.de",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Hohes Feld 3",
+          "postalCode": "31787",
+          "addressLocality": "Hameln",
+          "addressCountry": "DE"
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "Deutschland"
+        },
+        "description": "TecNova FTTH bietet professionelle Glasfaserarbeiten, FTTH Montage und Netzinfrastruktur in Deutschland."
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://tec-nova.de/#website",
+        "url": "https://tec-nova.de/",
+        "name": "TecNova FTTH",
+        "inLanguage": "de-DE"
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root{
+      --bg:#081120;
+      --bg2:#0c1b33;
+      --card:#ffffff;
+      --text:#102038;
+      --muted:#5f6f85;
+      --line:#dce5ef;
+      --brand:#0f6fff;
+      --brand2:#2ac4ff;
+      --soft:#f4f8fc;
+      --accent:#12b981;
+      --shadow:0 18px 50px rgba(8,17,32,.10);
+      --shadow-strong:0 24px 60px rgba(8,17,32,.18);
+      --radius:24px;
+      --transition:.35s ease;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Arial, Helvetica, sans-serif;
+      color:var(--text);
+      background:linear-gradient(180deg,#f7fbff 0%, #f2f7fb 100%);
+      line-height:1.6;
+      overflow-x:hidden;
+    }
+
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%;display:block}
+    .container{width:min(1180px,92%);margin:auto}
+
+    .topbar{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      background:rgba(30,43,60,.84);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+
+    .nav{
+      min-height:82px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+      position:relative;
+    }
+
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:16px;
+      color:#fff;
+      font-size:32px;
+      font-weight:700;
+      transition:var(--transition);
+    }
+
+    .logo:hover{
+      transform:translateY(-1px);
+    }
+
+    .logo img{
+      height:110px;
+      width:auto;
+      object-fit:contain;
+      transition:transform .35s ease, filter .35s ease;
+    }
+
+    .logo:hover img{
+      transform:scale(1.06) rotate(-2deg);
+      filter:drop-shadow(0 10px 20px rgba(42,196,255,.25));
+    }
+
+    .logo small{
+      display:block;
+      font-size:11px;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      color:#95d8ff;
+      margin-top:-3px;
+    }
+
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap:22px;
+    }
+
+    .nav-links a{
+      color:#dcecff;
+      font-size:15px;
+      position:relative;
+      transition:var(--transition);
+    }
+
+    .nav-links a::after{
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:-8px;
+      width:0;
+      height:2px;
+      background:linear-gradient(90deg,var(--brand),var(--brand2));
+      transition:width .3s ease;
+    }
+
+    .nav-links a:hover{
+      color:#fff;
+      transform:translateY(-2px);
+    }
+
+    .nav-links a:hover::after{
+      width:100%;
+    }
+
+    .nav-actions{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+
+    .menu-toggle{
+      display:none;
+      width:48px;
+      height:48px;
+      border:none;
+      border-radius:14px;
+      background:rgba(255,255,255,.08);
+      color:#fff;
+      font-size:22px;
+      cursor:pointer;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:14px 22px;
+      border-radius:14px;
+      font-weight:700;
+      border:none;
+      cursor:pointer;
+      transition:transform .25s ease, box-shadow .25s ease, background .25s ease, color .25s ease;
+    }
+
+    .btn:hover{
+      transform:translateY(-3px) scale(1.02);
+    }
+
+    .btn-primary{
+      background:linear-gradient(135deg,var(--brand),var(--brand2));
+      color:#fff;
+      box-shadow:0 14px 34px rgba(15,111,255,.25);
+    }
+
+    .btn-primary:hover{
+      box-shadow:0 18px 40px rgba(15,111,255,.35);
+    }
+
+    .btn-secondary{
+      background:rgba(255,255,255,.08);
+      color:#fff;
+      border:1px solid rgba(255,255,255,.16);
+    }
+
+    .btn-secondary:hover{
+      background:rgba(255,255,255,.14);
+    }
+
+    .btn-light{
+      background:#fff;
+      color:var(--text);
+      border:1px solid var(--line);
+      box-shadow:0 10px 26px rgba(8,17,32,.08);
+    }
+
+    .btn-light:hover{
+      box-shadow:0 16px 30px rgba(8,17,32,.14);
+    }
+
+    .btn-whatsapp{
+      background:#15c95b;
+      color:#fff;
+      box-shadow:0 14px 34px rgba(21,201,91,.24);
+    }
+
+    .btn-whatsapp:hover{
+      box-shadow:0 18px 40px rgba(21,201,91,.34);
+    }
+
+    .hero{
+      position:relative;
+      overflow:hidden;
+      background:
+        radial-gradient(circle at 15% 15%, rgba(42,196,255,.16), transparent 24%),
+        radial-gradient(circle at 85% 15%, rgba(15,111,255,.20), transparent 20%),
+        linear-gradient(135deg,var(--bg) 0%, var(--bg2) 58%, #154cae 100%);
+      color:#fff;
+    }
+
+    .hero::before{
+      content:"";
+      position:absolute;
+      width:520px;
+      height:520px;
+      right:-180px;
+      top:-120px;
+      border-radius:50%;
+      background:radial-gradient(circle, rgba(42,196,255,.18), rgba(42,196,255,0) 70%);
+      pointer-events:none;
+      animation:floatGlow 8s ease-in-out infinite;
+    }
+
+    .hero::after{
+      content:"";
+      position:absolute;
+      inset:auto -120px -140px auto;
+      width:380px;
+      height:380px;
+      border-radius:50%;
+      background:radial-gradient(circle, rgba(255,255,255,.18), rgba(255,255,255,0) 68%);
+      filter:blur(8px);
+      pointer-events:none;
+    }
+
+    .hero-inner{
+      display:grid;
+      grid-template-columns:1.15fr .85fr;
+      gap:36px;
+      padding:86px 0 96px;
+      align-items:center;
+      position:relative;
+      z-index:2;
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:10px 14px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.14);
+      background:rgba(255,255,255,.08);
+      color:#dff4ff;
+      font-size:14px;
+      margin-bottom:18px;
+      transition:var(--transition);
+    }
+
+    .eyebrow:hover{
+      transform:translateY(-2px);
+      background:rgba(255,255,255,.12);
+    }
+
+    h1{
+      margin:0 0 16px;
+      font-size:clamp(38px,5.7vw,66px);
+      line-height:1.02;
+      max-width:760px;
+    }
+
+    .hero p{
+      margin:0;
+      color:#e7effa;
+      font-size:18px;
+      max-width:720px;
+    }
+
+    .hero-actions{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:28px;
+    }
+
+    .hero-stats{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:14px;
+      margin-top:30px;
+    }
+
+    .stat{
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:20px;
+      padding:16px;
+      transition:transform .3s ease, background .3s ease, box-shadow .3s ease;
+    }
+
+    .stat:hover{
+      transform:translateY(-6px);
+      background:rgba(255,255,255,.12);
+      box-shadow:0 18px 34px rgba(0,0,0,.18);
+    }
+
+    .stat strong{
+      display:block;
+      font-size:26px;
+      margin-bottom:4px;
+    }
+
+    .stat span{
+      color:#dbeafe;
+      font-size:14px;
+    }
+
+    .hero-panel{
+      background:rgba(255,255,255,.10);
+      border:1px solid rgba(255,255,255,.16);
+      border-radius:28px;
+      padding:24px;
+      box-shadow:0 26px 60px rgba(0,0,0,.20);
+      transition:transform .35s ease, box-shadow .35s ease;
+    }
+
+    .hero-panel:hover{
+      transform:translateY(-8px);
+      box-shadow:0 30px 70px rgba(0,0,0,.28);
+    }
+
+    .hero-logo{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      margin-bottom:20px;
+    }
+
+    .hero-logo img{
+      width:min(340px, 86%);
+      height:auto;
+      filter:drop-shadow(0 16px 28px rgba(0,0,0,.28));
+      animation:floatLogo 4.5s ease-in-out infinite;
+      transition:transform .35s ease;
+    }
+
+    .hero-logo img:hover{
+      transform:scale(1.05);
+    }
+
+    .panel-head{
+      display:flex;
+      gap:10px;
+      margin-bottom:16px;
+    }
+
+    .dot{
+      width:11px;
+      height:11px;
+      border-radius:50%;
+      background:#fff;
+      opacity:.85;
+    }
+
+    .service-list{
+      display:grid;
+      gap:12px;
+    }
+
+    .service-item{
+      display:flex;
+      gap:14px;
+      align-items:flex-start;
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.10);
+      border-radius:20px;
+      padding:16px;
+      transition:transform .3s ease, background .3s ease, box-shadow .3s ease;
+    }
+
+    .service-item:hover{
+      transform:translateY(-6px) scale(1.01);
+      background:rgba(255,255,255,.13);
+      box-shadow:0 18px 30px rgba(0,0,0,.16);
+    }
+
+    .service-icon{
+      width:42px;
+      height:42px;
+      border-radius:14px;
+      display:grid;
+      place-items:center;
+      background:linear-gradient(135deg,#fff,#dff5ff);
+      color:var(--brand);
+      font-weight:700;
+      flex:0 0 auto;
+      transition:transform .3s ease;
+    }
+
+    .service-item:hover .service-icon{
+      transform:scale(1.08) rotate(-4deg);
+    }
+
+    .service-item h3{
+      margin:0 0 5px;
+      font-size:18px;
+    }
+
+    .service-item p{
+      margin:0;
+      color:#e8f2ff;
+      font-size:14px;
+    }
+
+    section{
+      padding:82px 0;
+    }
+
+    .section-title{
+      max-width:760px;
+      margin-bottom:28px;
+    }
+
+    .section-title span{
+      display:inline-block;
+      color:var(--brand);
+      font-weight:700;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      font-size:12px;
+      margin-bottom:10px;
+    }
+
+    .section-title h2{
+      margin:0 0 10px;
+      font-size:38px;
+      line-height:1.1;
+    }
+
+    .section-title p{
+      margin:0;
+      color:var(--muted);
+      font-size:17px;
+    }
+
+    .grid-3{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:20px;
+    }
+
+    .card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:26px;
+      box-shadow:var(--shadow);
+      transition:transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+      box-shadow:var(--shadow-strong);
+      border-color:#bfd8ff;
+    }
+
+    .icon-box{
+      width:54px;
+      height:54px;
+      border-radius:18px;
+      display:grid;
+      place-items:center;
+      background:linear-gradient(135deg,#e8f3ff,#d8f6ff);
+      color:var(--brand);
+      font-size:24px;
+      margin-bottom:16px;
+      transition:transform .3s ease;
+    }
+
+    .card:hover .icon-box{
+      transform:scale(1.08) rotate(-6deg);
+    }
+
+    .card h3{
+      margin:0 0 8px;
+      font-size:22px;
+    }
+
+    .card p{
+      margin:0;
+      color:var(--muted);
+    }
+
+    .two-col{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:20px;
+    }
+
+    .soft-card{
+      background:linear-gradient(180deg,#ffffff 0%, #f7fbff 100%);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:30px;
+      box-shadow:var(--shadow);
+      transition:transform .35s ease, box-shadow .35s ease;
+    }
+
+    .soft-card:hover{
+      transform:translateY(-8px);
+      box-shadow:var(--shadow-strong);
+    }
+
+    .list{
+      margin:18px 0 0;
+      padding-left:18px;
+    }
+
+    .list li{
+      margin:10px 0;
+      color:var(--text);
+    }
+
+    .badge-line{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:18px;
+    }
+
+    .tag{
+      padding:10px 14px;
+      border-radius:999px;
+      background:#edf7ff;
+      color:#0b5fd2;
+      border:1px solid #d9eaff;
+      font-size:14px;
+      font-weight:700;
+      transition:transform .25s ease, box-shadow .25s ease;
+    }
+
+    .tag:hover{
+      transform:translateY(-3px);
+      box-shadow:0 10px 20px rgba(15,111,255,.14);
+    }
+
+    .steps{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:18px;
+    }
+
+    .step{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:24px;
+      padding:24px;
+      box-shadow:var(--shadow);
+      transition:transform .35s ease, box-shadow .35s ease;
+    }
+
+    .step:hover{
+      transform:translateY(-10px);
+      box-shadow:var(--shadow-strong);
+    }
+
+    .step-no{
+      width:42px;
+      height:42px;
+      border-radius:14px;
+      background:linear-gradient(135deg,var(--brand),var(--brand2));
+      display:grid;
+      place-items:center;
+      color:#fff;
+      font-weight:700;
+      margin-bottom:14px;
+      transition:transform .3s ease;
+    }
+
+    .step:hover .step-no{
+      transform:scale(1.08) rotate(-5deg);
+    }
+
+    .step h3{
+      margin:0 0 8px;
+      font-size:20px;
+    }
+
+    .step p{
+      margin:0;
+      color:var(--muted);
+    }
+
+    .gallery-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+    }
+
+    .gallery-card{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:24px;
+      overflow:hidden;
+      box-shadow:var(--shadow);
+      transition:transform .35s ease, box-shadow .35s ease;
+    }
+
+    .gallery-card:hover{
+      transform:translateY(-10px);
+      box-shadow:var(--shadow-strong);
+    }
+
+    .gallery-card .image-wrap{
+      overflow:hidden;
+      position:relative;
+    }
+
+    .gallery-card img{
+      width:100%;
+      height:260px;
+      object-fit:cover;
+      transition:transform .6s ease, filter .6s ease;
+    }
+
+    .gallery-card:hover img{
+      transform:scale(1.08);
+      filter:brightness(1.04);
+    }
+
+    .gallery-card .caption{
+      padding:18px;
+    }
+
+    .gallery-card h3{
+      margin:0 0 6px;
+      font-size:20px;
+    }
+
+    .gallery-card p{
+      margin:0;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .contact-wrap{
+      display:grid;
+      grid-template-columns:1fr .9fr;
+      gap:20px;
+    }
+
+    .contact-card{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:28px;
+      padding:30px;
+      box-shadow:var(--shadow);
+      transition:transform .35s ease, box-shadow .35s ease;
+    }
+
+    .contact-card:hover{
+      transform:translateY(-8px);
+      box-shadow:var(--shadow-strong);
+    }
+
+    .contact-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
+      margin-top:18px;
+    }
+
+    .mini-box{
+      background:var(--soft);
+      border:1px solid #dfeaf5;
+      border-radius:20px;
+      padding:18px;
+      transition:transform .3s ease, box-shadow .3s ease;
+    }
+
+    .mini-box:hover{
+      transform:translateY(-4px);
+      box-shadow:0 14px 24px rgba(8,17,32,.08);
+    }
+
+    .mini-box h4{
+      margin:0 0 6px;
+      font-size:16px;
+    }
+
+    .mini-box p{
+      margin:0;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .map-box{
+      margin-top:18px;
+      border-radius:20px;
+      overflow:hidden;
+      border:1px solid var(--line);
+      box-shadow:var(--shadow);
+      transition:transform .35s ease, box-shadow .35s ease;
+    }
+
+    .map-box:hover{
+      transform:translateY(-6px);
+      box-shadow:var(--shadow-strong);
+    }
+
+    .map-box iframe{
+      width:100%;
+      height:320px;
+      border:0;
+      display:block;
+    }
+
+    .legal-section{
+      padding-top:20px;
+    }
+
+    .accordion{
+      display:grid;
+      gap:16px;
+    }
+
+    details.legal{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:22px;
+      overflow:hidden;
+      box-shadow:var(--shadow);
+      transition:box-shadow .3s ease, transform .3s ease;
+    }
+
+    details.legal:hover{
+      transform:translateY(-4px);
+      box-shadow:var(--shadow-strong);
+    }
+
+    details.legal[open]{
+      border-color:#cfe2ff;
+    }
+
+    details.legal summary{
+      list-style:none;
+      cursor:pointer;
+      padding:22px 24px;
+      font-weight:700;
+      font-size:22px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+    }
+
+    details.legal summary::-webkit-details-marker{
+      display:none;
+    }
+
+    .legal-body{
+      padding:0 24px 24px;
+      color:var(--text);
+    }
+
+    .legal-body h3{
+      margin:20px 0 8px;
+    }
+
+    .legal-body p{
+      margin:0 0 12px;
+      color:#334155;
+    }
+
+    .cta-band{
+      background:linear-gradient(135deg,#0e1d34 0%, #123a84 100%);
+      color:#fff;
+      border-radius:30px;
+      padding:34px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:16px;
+      box-shadow:0 22px 55px rgba(8,17,32,.18);
+      transition:transform .35s ease, box-shadow .35s ease;
+    }
+
+    .cta-band:hover{
+      transform:translateY(-8px);
+      box-shadow:0 28px 64px rgba(8,17,32,.24);
+    }
+
+    .cta-band h3{
+      margin:0 0 8px;
+      font-size:30px;
+    }
+
+    .cta-band p{
+      margin:0;
+      color:#dbeafe;
+    }
+
+    footer{
+      margin-top:84px;
+      background:#081120;
+      color:#dce8f9;
+      padding:40px 0 32px;
+    }
+
+    .footer-grid{
+      display:grid;
+      grid-template-columns:1.2fr .8fr .8fr;
+      gap:20px;
+    }
+
+    .footer-grid h4{
+      margin:0 0 12px;
+      color:#fff;
+    }
+
+    .footer-grid p,
+    .footer-grid a{
+      color:#c8d8ee;
+      font-size:15px;
+    }
+
+    .footer-grid a{
+      transition:var(--transition);
+    }
+
+    .footer-grid a:hover{
+      color:#fff;
+      transform:translateX(2px);
+      display:inline-block;
+    }
+
+    .footer-bottom{
+      margin-top:24px;
+      padding-top:20px;
+      border-top:1px solid rgba(255,255,255,.08);
+      color:#9fb3d1;
+      font-size:14px;
+    }
+
+    .footer-logo img{
+      height:120px;
+      width:auto;
+      object-fit:contain;
+      margin-bottom:14px;
+      transition:transform .35s ease, filter .35s ease;
+    }
+
+    .footer-logo img:hover{
+      transform:scale(1.05);
+      filter:drop-shadow(0 12px 18px rgba(42,196,255,.18));
+    }
+
+    .reveal{
+      opacity:0;
+      transform:translateY(34px);
+      transition:opacity .8s ease, transform .8s ease;
+    }
+
+    .reveal.visible{
+      opacity:1;
+      transform:translateY(0);
+    }
+
+    @keyframes floatLogo{
+      0%{transform:translateY(0)}
+      50%{transform:translateY(-12px)}
+      100%{transform:translateY(0)}
+    }
+
+    @keyframes floatGlow{
+      0%{transform:translateY(0)}
+      50%{transform:translateY(18px)}
+      100%{transform:translateY(0)}
+    }
+
+    @media (max-width: 980px){
+      .hero-inner,
+      .grid-3,
+      .two-col,
+      .steps,
+      .contact-wrap,
+      .footer-grid,
+      .hero-stats,
+      .contact-grid,
+      .gallery-grid{
+        grid-template-columns:1fr;
+      }
+
+      .nav-links,
+      .nav-actions{
+        display:none;
+      }
+
+      .menu-toggle{
+        display:inline-grid;
+        place-items:center;
+      }
+
+      .nav.open .nav-links{
+        display:flex;
+        position:absolute;
+        top:82px;
+        left:4%;
+        right:4%;
+        flex-direction:column;
+        align-items:flex-start;
+        gap:0;
+        background:rgba(8,17,32,.98);
+        border:1px solid rgba(255,255,255,.08);
+        border-radius:20px;
+        padding:10px 0;
+        box-shadow:0 20px 40px rgba(0,0,0,.25);
+      }
+
+      .nav.open .nav-links a{
+        width:100%;
+        padding:14px 18px;
+      }
+
+      .nav.open .nav-actions{
+        display:flex;
+        position:absolute;
+        top:calc(82px + 320px);
+        left:4%;
+        right:4%;
+      }
+
+      .nav.open .nav-actions .btn-primary{
+        width:100%;
+      }
+
+      h1{
+        font-size:48px;
+      }
+
+      .logo{
+        font-size:26px;
+      }
+
+      .logo img{
+        height:62px;
+      }
+
+      .hero-logo img{
+        width:min(280px, 82%);
+      }
+
+      .footer-logo img{
+        height:82px;
+      }
+
+      .gallery-card img{
+        height:220px;
+      }
+
+      .cta-band{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="container nav" id="siteNav">
+      <a href="#start" class="logo">
+        <img src="logo-round.png" alt="TecNova Logo">
+        <span>TecNova<small>Glasfaser & Montage</small></span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#leistungen">Leistungen</a>
+        <a href="#unternehmen">Unternehmen</a>
+        <a href="#ablauf">Ablauf</a>
+        <a href="#projekte">Projekte</a>
+        <a href="#kontakt">Kontakt</a>
+        <a href="#rechtliches">Rechtliches</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn btn-secondary" href="tel:+491626117789">Anrufen</a>
+        <a class="btn btn-primary" href="#kontakt">Projekt anfragen</a>
+      </div>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Menü öffnen">☰</button>
+    </div>
+  </div>
+
+  <header class="hero" id="start">
+    <div class="container hero-inner">
+      <div class="reveal">
+        <div class="eyebrow">Netzinfrastruktur · FTTH / FTTX · Montage</div>
+        <h1>TecNova – Glasfaser Einblasen und FTTH Montage in Deutschland</h1>
+
+        <p>
+          TecNova (auch geschrieben als tecnova, tec nova oder Tec Nova) ist Ihr Ansprechpartner für Glasfaser Einblasen und Montage in Deutschland.
+        </p>
+
+        <p>
+          Wir bieten professionelle Glasfaserarbeiten, FTTH Montage und Unterstützung beim Ausbau moderner Netzinfrastruktur für Unternehmen und Projekte in ganz Deutschland.
+        </p>
+
+        <p>
+          Unser Unternehmensstandort ist in Hameln. TecNova arbeitet jedoch nicht nur lokal, sondern unterstützt Projekte bundesweit.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#kontakt">Jetzt anfragen</a>
+          <a class="btn btn-secondary" href="#projekte">Bilder ansehen</a>
+          <a class="btn btn-whatsapp" href="https://wa.me/491626117789" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat">
+            <strong>Glasfaser</strong>
+            <span>Einblasen und Montage</span>
+          </div>
+          <div class="stat">
+            <strong>Hameln</strong>
+            <span>Standort Deutschland</span>
+          </div>
+          <div class="stat">
+            <strong>FTTH</strong>
+            <span>Montage deutschlandweit</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-panel reveal">
+        <div class="hero-logo">
+          <img src="logo2.png" alt="TecNova Rundlogo">
+        </div>
+
+        <div class="panel-head">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+
+        <div class="service-list">
+          <div class="service-item">
+            <div class="service-icon">01</div>
+            <div>
+              <h3>Glasfaser Einblasen</h3>
+              <p>Fachgerechte Einblasarbeiten mit Fokus auf Sorgfalt, Stabilität und saubere Durchführung.</p>
+            </div>
+          </div>
+
+          <div class="service-item">
+            <div class="service-icon">02</div>
+            <div>
+              <h3>FTTH Montage</h3>
+              <p>Professionelle Montage- und Ausbauarbeiten im Glasfaserumfeld für moderne Netzprojekte.</p>
+            </div>
+          </div>
+
+          <div class="service-item">
+            <div class="service-icon">03</div>
+            <div>
+              <h3>Projektunterstützung</h3>
+              <p>Zuverlässige Einbindung in laufende Ausbauprojekte mit direkter Kommunikation und sauberer Umsetzung.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section id="leistungen">
+    <div class="container">
+      <div class="section-title reveal">
+        <span>Leistungen</span>
+        <h2>Glasfaserarbeiten, FTTH Montage und Netzinfrastruktur</h2>
+        <p>
+          TecNova unterstützt Projekte im Bereich Glasfaser Einblasen, FTTH Montage, FTTX Umfeld und technischer Netzinfrastruktur
+          in Hameln und deutschlandweit.
+        </p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card reveal">
+          <div class="icon-box">◉</div>
+          <h3>Glasfaser Einblasen</h3>
+          <p>Ausführung im Rahmen von Glasfaserprojekten mit strukturiertem Arbeitsablauf und technischem Fokus.</p>
+        </div>
+
+        <div class="card reveal">
+          <div class="icon-box">⌁</div>
+          <h3>FTTH / FTTX Umfeld</h3>
+          <p>Unterstützung bei Ausbauprojekten und Tätigkeiten im Bereich moderner Netzinfrastruktur.</p>
+        </div>
+
+        <div class="card reveal">
+          <div class="icon-box">⚙</div>
+          <h3>Montage</h3>
+          <p>Praktische Montage- und Installationsarbeiten mit professioneller Außendarstellung für Auftraggeber.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="unternehmen">
+    <div class="container two-col">
+      <div class="soft-card reveal">
+        <div class="section-title" style="margin-bottom:14px">
+          <span>Unternehmen</span>
+          <h2>TecNova aus Hameln</h2>
+          <p>Einzelunternehmen mit klarer Spezialisierung.</p>
+        </div>
+
+        <p>
+          TecNova ist ein <strong>Einzelunternehmen</strong> im Bereich <strong>Glasfaser Einblasen und FTTH Montage</strong>.
+          Der Fokus liegt auf zuverlässiger Ausführung, sauberer Arbeit und direkter Erreichbarkeit für Auftraggeber
+          in <strong>Hameln</strong> und in ganz <strong>Deutschland</strong>.
+        </p>
+
+        <div class="badge-line">
+          <span class="tag">Einzelunternehmer</span>
+          <span class="tag">Glasfaser</span>
+          <span class="tag">FTTH Montage</span>
+          <span class="tag">Hameln</span>
+        </div>
+      </div>
+
+      <div class="soft-card reveal">
+        <div class="section-title" style="margin-bottom:14px">
+          <span>Vorteile</span>
+          <h2>Warum Auftraggeber TecNova wählen</h2>
+          <p>Professionell, strukturiert und direkt.</p>
+        </div>
+
+        <ul class="list">
+          <li>Fokus auf Glasfaser Einblasen und FTTH Montage</li>
+          <li>Direkte Kommunikation ohne Umwege</li>
+          <li>Praxisnahe Erfahrung mit realen Projekten</li>
+          <li>Saubere Darstellung für Auftraggeber und Partner</li>
+          <li>Standort in Hameln mit Einsatz deutschlandweit</li>
+          <li>Responsive Website und klarer Firmenauftritt</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="ablauf">
+    <div class="container">
+      <div class="section-title reveal">
+        <span>Ablauf</span>
+        <h2>So arbeitet TecNova</h2>
+        <p>Strukturiert, sauber und effizient – von der Anfrage bis zur Ausführung vor Ort.</p>
+      </div>
+
+      <div class="steps">
+        <div class="step reveal">
+          <div class="step-no">1</div>
+          <h3>Anfrage</h3>
+          <p>Schnelle Kontaktaufnahme für Glasfaserarbeiten, FTTH Montage oder Projektunterstützung.</p>
+        </div>
+
+        <div class="step reveal">
+          <div class="step-no">2</div>
+          <h3>Planung</h3>
+          <p>Klare Abstimmung der Arbeiten, Anforderungen und Einsatzbereiche.</p>
+        </div>
+
+        <div class="step reveal">
+          <div class="step-no">3</div>
+          <h3>Ausführung</h3>
+          <p>Saubere Umsetzung direkt im Feld, am Verteiler oder im Technikbereich.</p>
+        </div>
+
+        <div class="step reveal">
+          <div class="step-no">4</div>
+          <h3>Übergabe</h3>
+          <p>Strukturierte Ergebnisse mit Fokus auf Ordnung, Qualität und Zuverlässigkeit.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projekte">
+    <div class="container">
+      <div class="section-title reveal">
+        <span>Projekte</span>
+        <h2>Praxisbilder aus Glasfaserprojekten</h2>
+        <p>Reale Einblicke in Glasfaserverteiler, Patchfelder, Spleißarbeiten und FTTH Montage vor Ort.</p>
+      </div>
+
+      <div class="gallery-grid">
+
+        <div class="gallery-card reveal">
+          <div class="image-wrap">
+            <img src="work-1.jpg" alt="Glasfaser Rack und Patchfeld in einem Technikbereich" loading="lazy">
+          </div>
+          <div class="caption">
+            <h3>Patchfeld und Rack</h3>
+            <p>Strukturierte Glasfaserführung und sauberer Aufbau im Technikbereich.</p>
+          </div>
+        </div>
+
+        <div class="gallery-card reveal">
+          <div class="image-wrap">
+            <img src="work-2.jpg" alt="Offener Glasfaserverteiler im Außeneinsatz" loading="lazy">
+          </div>
+          <div class="caption">
+            <h3>Außenverteiler</h3>
+            <p>Montage und Organisation der Fasern direkt am Netzpunkt vor Ort.</p>
+          </div>
+        </div>
+
+        <div class="gallery-card reveal">
+          <div class="image-wrap">
+            <img src="work-3.jpg" alt="FTTH Einblasen mit Fremco Gerät an einem Glasfaserverteiler" loading="lazy">
+          </div>
+          <div class="caption">
+            <h3>Einblasen vor Ort</h3>
+            <p>Praktische Durchführung von Einblasarbeiten mit professionellem Equipment.</p>
+          </div>
+        </div>
+
+        <div class="gallery-card reveal">
+          <div class="image-wrap">
+            <img src="work-4.jpg" alt="Glasfaser Montage im Feld mit Einblasgerät" loading="lazy">
+          </div>
+          <div class="caption">
+            <h3>Montage im Feld</h3>
+            <p>Arbeiten direkt an der Infrastruktur mit Fokus auf saubere Ausführung.</p>
+          </div>
+        </div>
+
+        <div class="gallery-card reveal">
+          <div class="image-wrap">
+            <img src="work-5.jpg" alt="Beschriftete Glasfaser Module und saubere Dokumentation" loading="lazy">
+          </div>
+          <div class="caption">
+            <h3>Dokumentation und Ordnung</h3>
+            <p>Klare Beschriftung und strukturierte Zuordnung in der aktiven Technik.</p>
+          </div>
+        </div>
+
+        <div class="gallery-card reveal">
+          <div class="image-wrap">
+            <img src="logo-round.png" alt="TecNova Logo" loading="lazy">
+          </div>
+          <div class="caption">
+            <h3>TecNova</h3>
+            <p>Professioneller Auftritt für Glasfaser Einblasen, FTTH Montage und Netzinfrastruktur.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="kontakt">
+    <div class="container contact-wrap">
+      <div class="contact-card reveal">
+        <div class="section-title" style="margin-bottom:10px">
+          <span>Kontakt</span>
+          <h2>Direkter Kontakt zu TecNova</h2>
+          <p>Schnell erreichbar für Glasfaserarbeiten, FTTH Montage und Projektanfragen.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="mini-box">
+            <h4>Unternehmen</h4>
+            <p>TecNova<br>Inhaber: Abdulkader Salmo</p>
+          </div>
+
+          <div class="mini-box">
+            <h4>Adresse</h4>
+            <p>Hohes Feld 3<br>31787 Hameln<br>Deutschland</p>
+          </div>
+
+          <div class="mini-box">
+            <h4>Telefon</h4>
+            <p><a href="tel:+491626117789">01626117789</a></p>
+          </div>
+
+          <div class="mini-box">
+            <h4>E-Mail</h4>
+            <p><a href="mailto:info@tec-nova.de">info@tec-nova.de</a></p>
+          </div>
+        </div>
+
+        <div class="hero-actions" style="margin-top:20px">
+          <a class="btn btn-primary" href="mailto:info@tec-nova.de">E-Mail senden</a>
+          <a class="btn btn-whatsapp" href="https://wa.me/491626117789" target="_blank" rel="noopener">WhatsApp schreiben</a>
+          <a class="btn btn-light" href="tel:+491626117789">Jetzt anrufen</a>
+        </div>
+
+        <div class="map-box">
+          <iframe
+            src="https://maps.google.com/maps?q=Hohes%20Feld%203%2C%2031787%20Hameln%2C%20Deutschland&t=&z=15&ie=UTF8&iwloc=&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+
+      <div class="contact-card reveal">
+        <div class="section-title" style="margin-bottom:10px">
+          <span>Firmendaten</span>
+          <h2>Wichtige Unternehmensdaten</h2>
+          <p>Nur das Wesentliche, klar und professionell dargestellt.</p>
+        </div>
+
+        <div class="mini-box" style="margin-bottom:14px">
+          <h4>Rechtsform</h4>
+          <p>Einzelunternehmer</p>
+        </div>
+
+        <div class="mini-box">
+          <h4>USt-IdNr.</h4>
+          <p>DE457603829</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="legal-section" id="rechtliches">
+    <div class="container">
+      <div class="section-title reveal">
+        <span>Rechtliches</span>
+        <h2>Impressum und Datenschutz</h2>
+        <p>Klare rechtliche Informationen für einen professionellen Firmenauftritt in Deutschland.</p>
+      </div>
+
+      <div class="accordion">
+        <details class="legal reveal" open>
+          <summary>Impressum <span>＋</span></summary>
+          <div class="legal-body">
+            <h3>Angaben gemäß § 5 DDG</h3>
+            <p>
+              <strong>TecNova</strong><br>
+              Inhaber: Abdulkader Salmo<br>
+              Hohes Feld 3<br>
+              31787 Hameln<br>
+              Deutschland
+            </p>
+
+            <p>
+              <strong>Kontakt</strong><br>
+              Telefon: 01626117789<br>
+              E-Mail: info@tec-nova.de
+            </p>
+
+            <p>
+              <strong>Unternehmensangaben</strong><br>
+              Rechtsform: Einzelunternehmer<br>
+              USt-IdNr.: DE457603829
+            </p>
+
+            <p>
+              <strong>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</strong><br>
+              Abdulkader Salmo, Anschrift wie oben.
+            </p>
+          </div>
+        </details>
+
+        <details class="legal reveal">
+          <summary>Datenschutzerklärung <span>＋</span></summary>
+          <div class="legal-body">
+            <div class="legal-body">
+  <h3>1. Verantwortlicher</h3>
+  <p>
+    TecNova – Inhaber Abdulkader Salmo<br>
+    Hohes Feld 3<br>
+    31787 Hameln<br>
+    Deutschland<br><br>
+    E-Mail: info@tec-nova.de<br>
+    Telefon: 01626117789
+  </p>
+
+  <h3>2. Hosting</h3>
+  <p>
+    Diese Website wird über GitHub Pages (GitHub Inc., USA) ausgeliefert.<br>
+    Beim Aufruf der Website werden technische Daten verarbeitet wie IP-Adresse, Datum, Uhrzeit, Browser und Betriebssystem.<br>
+    Dies dient der Sicherheit und Stabilität der Website (Art. 6 Abs. 1 lit. f DSGVO).<br><br>
+    Es kann nicht ausgeschlossen werden, dass Daten in die USA übertragen werden.
+  </p>
+
+  <h3>3. Zweck und Rechtsgrundlage</h3>
+  <p>
+    Die Verarbeitung erfolgt zur Bereitstellung der Website und zur Bearbeitung von Anfragen.<br><br>
+    Rechtsgrundlagen:
+    <br>• Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse)
+    <br>• Art. 6 Abs. 1 lit. b DSGVO (bei Kontaktaufnahme)
+  </p>
+
+  <h3>4. Kontaktaufnahme</h3>
+  <p>
+    Bei Kontakt per Telefon, E-Mail oder WhatsApp werden Ihre Daten nur zur Bearbeitung Ihrer Anfrage verwendet.
+  </p>
+
+  <h3>4a. WhatsApp</h3>
+  <p>
+    Bei Nutzung von WhatsApp erfolgt die Verarbeitung durch WhatsApp Ireland Limited.<br>
+    Daten können außerhalb der EU verarbeitet werden.<br><br>
+    Mehr Infos:
+    https://www.whatsapp.com/legal/privacy-policy
+  </p>
+
+  <h3>5. Cookies</h3>
+  <p>
+    Diese Website verwendet keine Cookies, die eine Einwilligung erfordern.
+  </p>
+
+  <h3>6. Speicherdauer</h3>
+  <p>
+    Daten werden nur so lange gespeichert, wie es für die Anfrage notwendig ist.
+  </p>
+
+  <h3>7. Ihre Rechte</h3>
+  <p>
+    Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung sowie Widerspruch.
+  </p>
+
+  <h3>8. Beschwerderecht</h3>
+  <p>
+    Sie können sich bei einer Datenschutzbehörde beschweren.
+  </p>
+
+  <h3>9. Hinweis</h3>
+  <p>
+    Diese Datenschutzerklärung gilt für eine einfache Website ohne Tracking oder Analyse-Tools.
+  </p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="cta-band">
+        <div>
+          <h3>Professionelle Glasfaserlösungen für Ihr Projekt</h3>
+          <p>Kontaktieren Sie TecNova jetzt und erhalten Sie schnell ein unverbindliches Angebot für Glasfaserarbeiten und FTTH Montage.</p>
+        </div>
+        <a class="btn btn-primary" href="#kontakt">Kontakt aufnehmen</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-grid">
+      <div class="reveal">
+        <div class="footer-logo">
+          <img src="logo2.png" alt="TecNova Logo">
+        </div>
+        <p style="margin-top:14px">
+          TecNova – professioneller Firmenauftritt für Glasfaserarbeiten, FTTH Montage, Praxisbilder, Kontakt und rechtliche Informationen.
+        </p>
+      </div>
+
+      <div class="reveal">
+        <h4>Navigation</h4>
+        <p><a href="#leistungen">Leistungen</a></p>
+        <p><a href="#unternehmen">Unternehmen</a></p>
+        <p><a href="#ablauf">Ablauf</a></p>
+        <p><a href="#projekte">Projekte</a></p>
+        <p><a href="#kontakt">Kontakt</a></p>
+      </div>
+
+      <div class="reveal">
+        <h4>Rechtliches</h4>
+        <p><a href="#rechtliches">Impressum</a></p>
+        <p><a href="#rechtliches">Datenschutz</a></p>
+        <p><a href="tel:+491626117789">Telefon</a></p>
+        <p><a href="mailto:info@tec-nova.de">E-Mail</a></p>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      © 2026 TecNova. Alle Rechte vorbehalten.
+    </div>
+  </footer>
+
+  <script>
+    const nav = document.getElementById('siteNav');
+    const toggle = document.getElementById('menuToggle');
+
+    toggle.addEventListener('click', function(){
+      nav.classList.toggle('open');
+      toggle.textContent = nav.classList.contains('open') ? '✕' : '☰';
+    });
+
+    document.querySelectorAll('.nav-links a').forEach(link=>{
+      link.addEventListener('click', ()=>{
+        nav.classList.remove('open');
+        toggle.textContent = '☰';
+      });
+    });
+
+    const observer = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.12
+    });
+
+    document.querySelectorAll('.reveal').forEach(el=>{
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
